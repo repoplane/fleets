@@ -1,0 +1,20 @@
+name: CI
+
+# This runs. It is the repository's own workflow, not fixture content -- the inert markers
+# the scale fleet generates live under scale/repos/ and are never executed.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The generator is the source; repos/, fleet.yaml and census.json are its output. A
+      # hand edit to any of them would otherwise quietly become the thing everyone tests
+      # against, and forgelab would only notice as a stale-fixture error on a forge.
+      - name: scale is what generate.py says it is
+        run: python3 scale/generate.py --check

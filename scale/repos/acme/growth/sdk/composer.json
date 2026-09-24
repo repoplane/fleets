@@ -1,0 +1,7 @@
+{
+  "name": "acme/sdk",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

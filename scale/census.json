@@ -1,0 +1,2647 @@
+{
+  "seed": "repoplane-scale-v1",
+  "generated_by": "generate.py",
+  "repo_count": 108,
+  "structure": {
+    "root": "acme",
+    "teams": {
+      "catalog": 10,
+      "checkout": 10,
+      "data": 10,
+      "growth": 8,
+      "identity": 11,
+      "logistics": 9,
+      "mobile": 6,
+      "payments": 13,
+      "platform": 13,
+      "security": 7,
+      "sre": 4,
+      "support": 5
+    },
+    "unowned": 2,
+    "depth": {
+      "2": 2,
+      "3": 98,
+      "4": 8
+    },
+    "namespaces": 16,
+    "recurring_leaves": {
+      "api": 11,
+      "backoffice": 3,
+      "charts": 3,
+      "cli": 3,
+      "docs": 9,
+      "events": 3,
+      "infra": 5,
+      "sdk": 5,
+      "web": 6,
+      "worker": 10
+    }
+  },
+  "census": {
+    "archetype": {
+      "docs": 14,
+      "dotnet": 1,
+      "go": 17,
+      "helm": 3,
+      "java": 17,
+      "node": 17,
+      "php": 4,
+      "python": 17,
+      "ruby": 2,
+      "rust": 3,
+      "shell": 8,
+      "terraform": 5
+    },
+    "ci": {
+      "azure-pipelines": 14,
+      "github-actions": 40,
+      "gitlab-ci": 9,
+      "jenkins": 19,
+      "none": 32
+    },
+    "dockerfile": {
+      "None": 66,
+      "floating": 36,
+      "pinned": 6
+    },
+    "files": {
+      "README.md": 105,
+      "LICENSE": 62,
+      "CODEOWNERS": 54,
+      "Dockerfile": 42,
+      ".github/workflows/ci.yml": 40,
+      "Jenkinsfile": 19,
+      "go.mod": 17,
+      "main.go": 17,
+      "package.json": 17,
+      "pom.xml": 17,
+      "pyproject.toml": 17,
+      "src/app.py": 17,
+      "src/index.js": 17,
+      "src/main/java/App.java": 17,
+      "azure-pipelines.yml": 14,
+      "docs/index.md": 14,
+      "docs/runbook.md": 14,
+      "mkdocs.yml": 14,
+      ".gitlab-ci.yml": 9,
+      "SECURITY.md": 9,
+      "Makefile": 8,
+      "bin/deploy.sh": 8,
+      "bin/rotate.sh": 8,
+      "services/api/go.mod": 6,
+      "services/api/main.go": 6,
+      "services/web/package.json": 6,
+      "main.tf": 5,
+      "variables.tf": 5,
+      "versions.tf": 5,
+      "composer.json": 4,
+      "public/index.php": 4,
+      "Cargo.toml": 3,
+      "Chart.yaml": 3,
+      "src/main.rs": 3,
+      "templates/deployment.yaml": 3,
+      "values.yaml": 3,
+      "Gemfile": 2,
+      "app.rb": 2,
+      "Program.cs": 1,
+      "events.csproj": 1
+    }
+  },
+  "repos": {
+    "acme/catalog/api": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-catalog-api",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-api"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/catalog/docs": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-catalog-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/events": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "events",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-catalog-events",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-events"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/catalog/importer": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "importer",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-catalog-importer",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-importer"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/media-pipeline": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "media-pipeline",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-catalog-media-pipeline",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-media-pipeline"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/pricing": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "pricing",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-catalog-pricing",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-pricing"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/sdk": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "sdk",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-catalog-sdk",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-sdk"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/search-indexer": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "search-indexer",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-catalog-search-indexer",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-search-indexer"
+      },
+      "ci": [],
+      "has": {
+        "readme": false,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/web": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-catalog-web",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-web"
+      },
+      "ci": [
+        "github-actions",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/catalog/worker": {
+      "team": "catalog",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-catalog-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "catalog-worker"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/api": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-checkout-api",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-api"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/cart": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "cart",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-checkout-cart",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-cart"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/cli": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "cli",
+      "depth": 3,
+      "archetype": "rust",
+      "flat": "acme-checkout-cli",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-cli"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/docs": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-checkout-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/events": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "events",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-checkout-events",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-events"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/infra": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "infra",
+      "depth": 3,
+      "archetype": "terraform",
+      "flat": "acme-checkout-infra",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-infra"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/promo-engine": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "promo-engine",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-checkout-promo-engine",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-promo-engine"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/tax-engine": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "tax-engine",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-checkout-tax-engine",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-tax-engine"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/web": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-checkout-web",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-web"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/checkout/worker": {
+      "team": "checkout",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-checkout-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "checkout-worker"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/api": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-data-api",
+      "ado": {
+        "project": "acme",
+        "repo": "data-api"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/charts": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "charts",
+      "depth": 3,
+      "archetype": "helm",
+      "flat": "acme-data-charts",
+      "ado": {
+        "project": "acme",
+        "repo": "data-charts"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/docs": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-data-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "data-docs"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/ingest/connectors": {
+      "team": "data",
+      "subsystem": "ingest",
+      "leaf": "connectors",
+      "depth": 4,
+      "archetype": "java",
+      "flat": "acme-data-ingest-connectors",
+      "ado": {
+        "project": "acme",
+        "repo": "data-ingest-connectors"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/ingest/scheduler": {
+      "team": "data",
+      "subsystem": "ingest",
+      "leaf": "scheduler",
+      "depth": 4,
+      "archetype": "python",
+      "flat": "acme-data-ingest-scheduler",
+      "ado": {
+        "project": "acme",
+        "repo": "data-ingest-scheduler"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/lineage": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "lineage",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-data-lineage",
+      "ado": {
+        "project": "acme",
+        "repo": "data-lineage"
+      },
+      "ci": [
+        "azure-pipelines",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/data/metrics-store": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "metrics-store",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-data-metrics-store",
+      "ado": {
+        "project": "acme",
+        "repo": "data-metrics-store"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/notebooks": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "notebooks",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-data-notebooks",
+      "ado": {
+        "project": "acme",
+        "repo": "data-notebooks"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/warehouse-models": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "warehouse-models",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-data-warehouse-models",
+      "ado": {
+        "project": "acme",
+        "repo": "data-warehouse-models"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/data/worker": {
+      "team": "data",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-data-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "data-worker"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/design-system": {
+      "team": null,
+      "subsystem": null,
+      "leaf": "design-system",
+      "depth": 2,
+      "archetype": "docs",
+      "flat": "acme-design-system",
+      "ado": {
+        "project": "acme",
+        "repo": "design-system"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/api": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "ruby",
+      "flat": "acme-growth-api",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-api"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/email-templates": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "email-templates",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-growth-email-templates",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-email-templates"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/experiments": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "experiments",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-growth-experiments",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-experiments"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/landing-pages": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "landing-pages",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-growth-landing-pages",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-landing-pages"
+      },
+      "ci": [
+        "github-actions",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/referrals": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "referrals",
+      "depth": 3,
+      "archetype": "php",
+      "flat": "acme-growth-referrals",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-referrals"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/sdk": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "sdk",
+      "depth": 3,
+      "archetype": "php",
+      "flat": "acme-growth-sdk",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-sdk"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/web": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-growth-web",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-web"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/growth/worker": {
+      "team": "growth",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "php",
+      "flat": "acme-growth-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "growth-worker"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/handbook": {
+      "team": null,
+      "subsystem": null,
+      "leaf": "handbook",
+      "depth": 2,
+      "archetype": "node",
+      "flat": "acme-handbook",
+      "ado": {
+        "project": "acme",
+        "repo": "handbook"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/api": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-identity-api",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-api"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/charts": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "charts",
+      "depth": 3,
+      "archetype": "helm",
+      "flat": "acme-identity-charts",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-charts"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/directory-sync": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "directory-sync",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-identity-directory-sync",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-directory-sync"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/docs": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-identity-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/mfa": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "mfa",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-identity-mfa",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-mfa"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/scim-sync": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "scim-sync",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-identity-scim-sync",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-scim-sync"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/sdk": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "sdk",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-identity-sdk",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-sdk"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/session-store": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "session-store",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-identity-session-store",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-session-store"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/sso-broker": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "sso-broker",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-identity-sso-broker",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-sso-broker"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/web": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-identity-web",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-web"
+      },
+      "ci": [
+        "github-actions",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/identity/worker": {
+      "team": "identity",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-identity-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "identity-worker"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/api": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-logistics-api",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-api"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": false,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/backoffice": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "backoffice",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-logistics-backoffice",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-backoffice"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/carrier-adapters": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "carrier-adapters",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-logistics-carrier-adapters",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-carrier-adapters"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/events": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "events",
+      "depth": 3,
+      "archetype": "dotnet",
+      "flat": "acme-logistics-events",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-events"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": false,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/infra": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "infra",
+      "depth": 3,
+      "archetype": "terraform",
+      "flat": "acme-logistics-infra",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-infra"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/label-printer": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "label-printer",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-logistics-label-printer",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-label-printer"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/tracking": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "tracking",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-logistics-tracking",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-tracking"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/web": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-logistics-web",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-web"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/logistics/worker": {
+      "team": "logistics",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-logistics-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "logistics-worker"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/android-app": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "android-app",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-mobile-android-app",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-android-app"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/docs": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-mobile-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/ios-app": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "ios-app",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-mobile-ios-app",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-ios-app"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/push-relay": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "push-relay",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-mobile-push-relay",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-push-relay"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/sdk": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "sdk",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-mobile-sdk",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-sdk"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/mobile/web": {
+      "team": "mobile",
+      "subsystem": null,
+      "leaf": "web",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-mobile-web",
+      "ado": {
+        "project": "acme",
+        "repo": "mobile-web"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/api": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-payments-api",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-api"
+      },
+      "ci": [
+        "azure-pipelines",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/docs": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-payments-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/fraud-scoring": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "fraud-scoring",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-payments-fraud-scoring",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-fraud-scoring"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/gateway/adapters": {
+      "team": "payments",
+      "subsystem": "gateway",
+      "leaf": "adapters",
+      "depth": 4,
+      "archetype": "python",
+      "flat": "acme-payments-gateway-adapters",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-gateway-adapters"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/gateway/api": {
+      "team": "payments",
+      "subsystem": "gateway",
+      "leaf": "api",
+      "depth": 4,
+      "archetype": "go",
+      "flat": "acme-payments-gateway-api",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-gateway-api"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/gateway/worker": {
+      "team": "payments",
+      "subsystem": "gateway",
+      "leaf": "worker",
+      "depth": 4,
+      "archetype": "java",
+      "flat": "acme-payments-gateway-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-gateway-worker"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/infra": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "infra",
+      "depth": 3,
+      "archetype": "terraform",
+      "flat": "acme-payments-infra",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-infra"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/ledger": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "ledger",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-payments-ledger",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-ledger"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/payouts": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "payouts",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-payments-payouts",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-payouts"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/reconciliation": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "reconciliation",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-payments-reconciliation",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-reconciliation"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/sdk": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "sdk",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-payments-sdk",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-sdk"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/settlement": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "settlement",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-payments-settlement",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-settlement"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "pinned",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/payments/worker": {
+      "team": "payments",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "java",
+      "flat": "acme-payments-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "payments-worker"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": true,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/api": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-platform-api",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-api"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/backoffice": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "backoffice",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-platform-backoffice",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-backoffice"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/build-cache": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "build-cache",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-platform-build-cache",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-build-cache"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/platform/charts": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "charts",
+      "depth": 3,
+      "archetype": "helm",
+      "flat": "acme-platform-charts",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-charts"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/cli": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "cli",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-platform-cli",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-cli"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/docs": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-platform-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/feature-flags": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "feature-flags",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-platform-feature-flags",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-feature-flags"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/infra": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "infra",
+      "depth": 3,
+      "archetype": "terraform",
+      "flat": "acme-platform-infra",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-infra"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/observability/alerting": {
+      "team": "platform",
+      "subsystem": "observability",
+      "leaf": "alerting",
+      "depth": 4,
+      "archetype": "go",
+      "flat": "acme-platform-observability-alerting",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-observability-alerting"
+      },
+      "ci": [
+        "gitlab-ci",
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/observability/collector": {
+      "team": "platform",
+      "subsystem": "observability",
+      "leaf": "collector",
+      "depth": 4,
+      "archetype": "rust",
+      "flat": "acme-platform-observability-collector",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-observability-collector"
+      },
+      "ci": [],
+      "has": {
+        "readme": false,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/observability/dashboards": {
+      "team": "platform",
+      "subsystem": "observability",
+      "leaf": "dashboards",
+      "depth": 4,
+      "archetype": "node",
+      "flat": "acme-platform-observability-dashboards",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-observability-dashboards"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/platform/service-catalog": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "service-catalog",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-platform-service-catalog",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-service-catalog"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/platform/worker": {
+      "team": "platform",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "rust",
+      "flat": "acme-platform-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "platform-worker"
+      },
+      "ci": [
+        "azure-pipelines"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/api": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-security-api",
+      "ado": {
+        "project": "acme",
+        "repo": "security-api"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/backoffice": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "backoffice",
+      "depth": 3,
+      "archetype": "node",
+      "flat": "acme-security-backoffice",
+      "ado": {
+        "project": "acme",
+        "repo": "security-backoffice"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/docs": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-security-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "security-docs"
+      },
+      "ci": [
+        "gitlab-ci"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/policy-bundles": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "policy-bundles",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-security-policy-bundles",
+      "ado": {
+        "project": "acme",
+        "repo": "security-policy-bundles"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/secret-rotator": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "secret-rotator",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-security-secret-rotator",
+      "ado": {
+        "project": "acme",
+        "repo": "security-secret-rotator"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/vuln-triage": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "vuln-triage",
+      "depth": 3,
+      "archetype": "go",
+      "flat": "acme-security-vuln-triage",
+      "ado": {
+        "project": "acme",
+        "repo": "security-vuln-triage"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": true,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/security/worker": {
+      "team": "security",
+      "subsystem": null,
+      "leaf": "worker",
+      "depth": 3,
+      "archetype": "python",
+      "flat": "acme-security-worker",
+      "ado": {
+        "project": "acme",
+        "repo": "security-worker"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": true,
+        "codeowners": true,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/sre/cli": {
+      "team": "sre",
+      "subsystem": null,
+      "leaf": "cli",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-sre-cli",
+      "ado": {
+        "project": "acme",
+        "repo": "sre-cli"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": true
+      }
+    },
+    "acme/sre/infra": {
+      "team": "sre",
+      "subsystem": null,
+      "leaf": "infra",
+      "depth": 3,
+      "archetype": "terraform",
+      "flat": "acme-sre-infra",
+      "ado": {
+        "project": "acme",
+        "repo": "sre-infra"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": true,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/sre/legacy-deploy": {
+      "team": "sre",
+      "subsystem": null,
+      "leaf": "legacy-deploy",
+      "depth": 3,
+      "archetype": "shell",
+      "flat": "acme-sre-legacy-deploy",
+      "ado": {
+        "project": "acme",
+        "repo": "sre-legacy-deploy"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": true,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/sre/runbooks": {
+      "team": "sre",
+      "subsystem": null,
+      "leaf": "runbooks",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-sre-runbooks",
+      "ado": {
+        "project": "acme",
+        "repo": "sre-runbooks"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/support/api": {
+      "team": "support",
+      "subsystem": null,
+      "leaf": "api",
+      "depth": 3,
+      "archetype": "ruby",
+      "flat": "acme-support-api",
+      "ado": {
+        "project": "acme",
+        "repo": "support-api"
+      },
+      "ci": [
+        "jenkins"
+      ],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/support/docs": {
+      "team": "support",
+      "subsystem": null,
+      "leaf": "docs",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-support-docs",
+      "ado": {
+        "project": "acme",
+        "repo": "support-docs"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/support/helpdesk-sync": {
+      "team": "support",
+      "subsystem": null,
+      "leaf": "helpdesk-sync",
+      "depth": 3,
+      "archetype": "php",
+      "flat": "acme-support-helpdesk-sync",
+      "ado": {
+        "project": "acme",
+        "repo": "support-helpdesk-sync"
+      },
+      "ci": [
+        "github-actions"
+      ],
+      "has": {
+        "readme": true,
+        "license": false,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": "floating",
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/support/knowledge-base": {
+      "team": "support",
+      "subsystem": null,
+      "leaf": "knowledge-base",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-support-knowledge-base",
+      "ado": {
+        "project": "acme",
+        "repo": "support-knowledge-base"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    },
+    "acme/support/macros": {
+      "team": "support",
+      "subsystem": null,
+      "leaf": "macros",
+      "depth": 3,
+      "archetype": "docs",
+      "flat": "acme-support-macros",
+      "ado": {
+        "project": "acme",
+        "repo": "support-macros"
+      },
+      "ci": [],
+      "has": {
+        "readme": true,
+        "license": true,
+        "security_policy": false,
+        "codeowners": false,
+        "dockerfile": null,
+        "vendor": false,
+        "monorepo": false
+      }
+    }
+  }
+}

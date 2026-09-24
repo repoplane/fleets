@@ -1,0 +1,4 @@
+site_name: knowledge-base
+nav:
+  - Home: index.md
+  - Runbook: runbook.md

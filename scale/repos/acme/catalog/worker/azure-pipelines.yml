@@ -1,0 +1,9 @@
+# Fixture only: no CI trigger.
+trigger: none
+pr: none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: echo build

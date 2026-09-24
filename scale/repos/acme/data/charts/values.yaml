@@ -1,0 +1,4 @@
+replicaCount: 1
+image:
+  repository: ok
+  tag: "1.0.0"

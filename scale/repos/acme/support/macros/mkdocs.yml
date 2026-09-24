@@ -1,0 +1,4 @@
+site_name: macros
+nav:
+  - Home: index.md
+  - Runbook: runbook.md

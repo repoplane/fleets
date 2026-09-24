@@ -1,0 +1,4 @@
+FROM python@sha256:474ca0ec2fde06aec5e1de9e7864404847f1e77455d79f10ea2021f25d543162
+WORKDIR /app
+COPY . .
+CMD ["echo", "ok"]

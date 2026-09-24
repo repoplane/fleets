@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="#-shapes">shapes</a> &bull;
+  <a href="#-the-fleets">The fleets</a> &bull;
   <a href="#-using-a-fleet">Using a fleet</a> &bull;
   <a href="#-tokens">Tokens</a> &bull;
   <a href="#-sandboxes">Sandboxes</a>
@@ -34,10 +34,23 @@ What makes a fleet reusable is that it is **pinned**: the same inputs produce th
 SHAs on every machine and every forge, so `fleet.lock.json` is identical for everyone who
 applies it — and tests can assert against it.
 
+## 🗂 The fleets
+
+| Fleet | Repos | Question it answers |
+|---|---:|---|
+| 🧩 [`shapes/`](shapes) | 15 | *Does forgelab handle each forge correctly?* |
+| 🏢 [`scale/`](scale) | 108 | *Does it hold up at size — deep namespaces, more than one page, realistic variety?* |
+
+They share every sandbox organisation, and forgelab identifies a repository by name, so nothing
+may be named twice. `scale` keeps everything under one `acme/` root, which makes that structural
+rather than a rule anyone has to remember — and on Azure DevOps, where only the first path
+segment becomes a project, it is also what keeps the two fleets from ever destroying each other:
+`scale` owns the project `acme`, `shapes` owns `fleet`, `platform` and `services`.
+
 ## 🧩 `shapes/`
 
-The fleet, in [`shapes/`](shapes): twelve repositories at the root, each one shape a forge
-integration trips on, and three more in namespaces. It is the same fleet as forgelab's
+Twelve repositories at the root, each one shape a forge integration trips on, and three more in
+namespaces. It is the same fleet as forgelab's
 [`examples/fleet`](https://github.com/repoplane/forgelab/tree/main/examples/fleet), kept in
 sync by hand.
 
@@ -62,6 +75,32 @@ Namespaces land as subgroups on GitLab, as a project on Azure DevOps, and as a `
 on GitHub and Forgejo (`platform/core/api` is `platform-core-api` there), so on those two the
 listing holds all fifteen.
 
+## 🏢 `scale/`
+
+108 repositories laid out as a plausible company, under one `acme/` root: twelve uneven teams,
+three subsystems taking it to depth four, and leaf names that recur across teams on purpose —
+eleven of them are called `api`. Generated, never hand-edited, by
+[`scale/generate.py`](scale/generate.py); `--check` runs in CI so an edit cannot quietly become
+the thing everyone tests against.
+
+It exists for what `shapes/` structurally cannot reach:
+
+- **More than one page.** GitHub and GitLab list 100 at a time, Forgejo 50. 108 gives `100 + 8`
+  on the first two and `50 + 50 + 8` on the third — two *consecutive* full pages, the case that
+  `100 + 1` never produces.
+- **Namespaces at depth.** Sixteen subgroups on GitLab, created parents-first; one project on
+  Azure DevOps, where only the first segment counts; `acme-payments-gateway-api` on GitHub.
+- **Realistic variety.** Twelve archetypes, four of which carry no conventional manifest at all,
+  so a rule that assumes every repository is parseable visibly fails.
+
+[`scale/census.json`](scale/census.json) records what each repository *has* — archetype, team,
+depth, CI markers, which conventional files — but deliberately no verdict on whether that is
+good. The opinion belongs to whatever is being tested.
+
+CI markers are present but **inert by construction**: GitHub workflows are `on:
+workflow_dispatch`, GitLab pipelines are `when: never`. An apply, and every `reset` push after
+it, would otherwise spawn pipelines that fail for want of a runner.
+
 ## 🚀 Using a fleet
 
 `sandboxes.yaml` lives at the repository root, outside the fleet directory, so pass it
@@ -78,13 +117,19 @@ forgelab reset  --sandbox gh --fleet shapes --config sandboxes.yaml
 
 ```text
 fleets/
-├── sandboxes.yaml      where the fleet can be applied
+├── sandboxes.yaml      where each fleet can be applied — shared by all of them
 ├── .env.example        reads the tokens out of the macOS keychain
-└── shapes/
+├── shapes/
+│   ├── fleet.yaml
+│   ├── fleet.lock.json
+│   └── repos/<path>/   a directory holding a file is a repository;
+│                       one holding only directories is a namespace
+└── scale/
+    ├── generate.py     the source of everything else in this directory
+    ├── census.json     what each repository has, per repository
     ├── fleet.yaml
     ├── fleet.lock.json
-    └── repos/<path>/   a directory holding a file is a repository;
-                        one holding only directories is a namespace
+    └── repos/acme/<team>/[<subsystem>/]<repo>/
 ```
 
 ## 🔑 Tokens
