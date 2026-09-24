@@ -6,7 +6,6 @@
 
 <p align="center">
   <a href="https://github.com/repoplane/forgelab"><img src="https://img.shields.io/badge/applied%20with-forgelab-6f42c1" alt="Applied with forgelab"></a>
-  <img src="https://img.shields.io/badge/repositories-15-blue" alt="15 repositories">
   <img src="https://img.shields.io/badge/forges-Forgejo%20%C2%B7%20GitHub%20%C2%B7%20GitLab%20%C2%B7%20Azure%20DevOps-lightgrey" alt="Forges">
 </p>
 
