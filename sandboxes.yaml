@@ -1,0 +1,25 @@
+version: 1
+
+sandboxes:
+
+  local:
+    forge: forgejo
+    base_url: http://localhost:3000
+    org: forgelab-sandbox
+    token_env: FORGELAB_LOCAL_TOKEN
+
+  gh:
+    forge: github
+    org: repoplane-sandbox
+    token_env: FORGELAB_GH_TOKEN
+
+  gl:
+    forge: gitlab
+    org: repoplane-sandbox
+    token_env: FORGELAB_GL_TOKEN
+
+  ado:
+    forge: azuredevops
+    org: repoplane-sandbox
+    default_project: fleet
+    token_env: FORGELAB_ADO_TOKEN
