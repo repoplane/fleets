@@ -1,8 +1,0 @@
-# Fixture only: no pipeline is ever created.
-workflow:
-  rules:
-    - when: never
-
-build:
-  script:
-    - echo build

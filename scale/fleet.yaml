@@ -21,218 +21,218 @@ defaults:
 
 repos:
   acme/catalog/api:
-    topics: [python, catalog, github-actions]
+    topics: [python, catalog]
   acme/catalog/docs:
-    topics: [docs, catalog, no-ci]
+    topics: [docs, catalog]
   acme/catalog/events:
-    topics: [java, catalog, jenkins]
+    topics: [java, catalog]
   acme/catalog/importer:
-    topics: [python, catalog, azure-pipelines]
+    topics: [python, catalog]
   acme/catalog/media-pipeline:
-    topics: [python, catalog, no-ci]
+    topics: [python, catalog]
   acme/catalog/pricing:
-    topics: [java, catalog, github-actions]
+    topics: [java, catalog]
   acme/catalog/sdk:
-    topics: [go, catalog, no-ci]
+    topics: [go, catalog]
   acme/catalog/search-indexer:
-    topics: [python, catalog, no-ci]
+    topics: [python, catalog]
   acme/catalog/web:
-    topics: [node, catalog, github-actions]
+    topics: [node, catalog]
   acme/catalog/worker:
-    topics: [python, catalog, azure-pipelines]
+    topics: [python, catalog]
   acme/checkout/api:
-    topics: [java, checkout, no-ci]
+    topics: [java, checkout]
   acme/checkout/cart:
-    topics: [node, checkout, github-actions]
+    topics: [node, checkout]
   acme/checkout/cli:
-    topics: [rust, checkout, no-ci]
+    topics: [rust, checkout]
   acme/checkout/docs:
-    topics: [docs, checkout, no-ci]
+    topics: [docs, checkout]
   acme/checkout/events:
-    topics: [go, checkout, no-ci]
+    topics: [go, checkout]
   acme/checkout/infra:
-    topics: [terraform, checkout, github-actions]
+    topics: [terraform, checkout]
   acme/checkout/promo-engine:
-    topics: [node, checkout, github-actions]
+    topics: [node, checkout]
   acme/checkout/tax-engine:
-    topics: [java, checkout, no-ci]
+    topics: [java, checkout]
   acme/checkout/web:
-    topics: [node, checkout, no-ci]
+    topics: [node, checkout]
   acme/checkout/worker:
-    topics: [go, checkout, azure-pipelines]
+    topics: [go, checkout]
   acme/data/api:
-    topics: [python, data, github-actions]
+    topics: [python, data]
   acme/data/charts:
-    topics: [helm, data, gitlab-ci]
+    topics: [helm, data]
   acme/data/docs:
-    topics: [docs, data, github-actions]
+    topics: [docs, data]
   acme/data/ingest/connectors:
-    topics: [java, data, gitlab-ci]
+    topics: [java, data]
   acme/data/ingest/scheduler:
-    topics: [python, data, github-actions]
+    topics: [python, data]
   acme/data/lineage:
-    topics: [python, data, azure-pipelines]
+    topics: [python, data]
   acme/data/metrics-store:
-    topics: [java, data, jenkins]
+    topics: [java, data]
   acme/data/notebooks:
-    topics: [docs, data, no-ci]
+    topics: [docs, data]
   acme/data/warehouse-models:
-    topics: [python, data, gitlab-ci]
+    topics: [python, data]
   acme/data/worker:
-    topics: [python, data, jenkins]
+    topics: [python, data]
   acme/design-system:
-    topics: [docs, unowned, no-ci]
+    topics: [docs, unowned]
   acme/growth/api:
-    topics: [ruby, growth, jenkins]
+    topics: [ruby, growth]
   acme/growth/email-templates:
-    topics: [node, growth, gitlab-ci]
+    topics: [node, growth]
   acme/growth/experiments:
-    topics: [node, growth, gitlab-ci]
+    topics: [node, growth]
   acme/growth/landing-pages:
-    topics: [node, growth, github-actions]
+    topics: [node, growth]
   acme/growth/referrals:
-    topics: [php, growth, github-actions]
+    topics: [php, growth]
   acme/growth/sdk:
-    topics: [php, growth, github-actions]
+    topics: [php, growth]
   acme/growth/web:
-    topics: [node, growth, no-ci]
+    topics: [node, growth]
   acme/growth/worker:
-    topics: [php, growth, gitlab-ci]
+    topics: [php, growth]
   acme/handbook:
-    topics: [node, unowned, azure-pipelines]
+    topics: [node, unowned]
   acme/identity/api:
-    topics: [java, identity, azure-pipelines]
+    topics: [java, identity]
   acme/identity/charts:
-    topics: [helm, identity, jenkins]
+    topics: [helm, identity]
   acme/identity/directory-sync:
-    topics: [node, identity, github-actions]
+    topics: [node, identity]
   acme/identity/docs:
-    topics: [docs, identity, no-ci]
+    topics: [docs, identity]
   acme/identity/mfa:
-    topics: [java, identity, github-actions]
+    topics: [java, identity]
   acme/identity/scim-sync:
-    topics: [python, identity, github-actions]
+    topics: [python, identity]
   acme/identity/sdk:
-    topics: [java, identity, no-ci]
+    topics: [java, identity]
   acme/identity/session-store:
-    topics: [java, identity, azure-pipelines]
+    topics: [java, identity]
   acme/identity/sso-broker:
-    topics: [python, identity, github-actions]
+    topics: [python, identity]
   acme/identity/web:
-    topics: [node, identity, github-actions]
+    topics: [node, identity]
   acme/identity/worker:
-    topics: [go, identity, github-actions]
+    topics: [go, identity]
   acme/logistics/api:
-    topics: [python, logistics, azure-pipelines]
+    topics: [python, logistics]
   acme/logistics/backoffice:
-    topics: [node, logistics, github-actions]
+    topics: [node, logistics]
   acme/logistics/carrier-adapters:
-    topics: [go, logistics, github-actions]
+    topics: [go, logistics]
   acme/logistics/events:
-    topics: [dotnet, logistics, github-actions]
+    topics: [dotnet, logistics]
   acme/logistics/infra:
-    topics: [terraform, logistics, azure-pipelines]
+    topics: [terraform, logistics]
   acme/logistics/label-printer:
-    topics: [go, logistics, no-ci]
+    topics: [go, logistics]
   acme/logistics/tracking:
-    topics: [go, logistics, no-ci]
+    topics: [go, logistics]
   acme/logistics/web:
-    topics: [node, logistics, github-actions]
+    topics: [node, logistics]
   acme/logistics/worker:
-    topics: [go, logistics, github-actions]
+    topics: [go, logistics]
   acme/mobile/android-app:
-    topics: [java, mobile, github-actions]
+    topics: [java, mobile]
   acme/mobile/docs:
-    topics: [docs, mobile, no-ci]
+    topics: [docs, mobile]
   acme/mobile/ios-app:
-    topics: [shell, mobile, no-ci]
+    topics: [shell, mobile]
   acme/mobile/push-relay:
-    topics: [shell, mobile, github-actions]
+    topics: [shell, mobile]
   acme/mobile/sdk:
-    topics: [shell, mobile, jenkins]
+    topics: [shell, mobile]
   acme/mobile/web:
-    topics: [node, mobile, no-ci]
+    topics: [node, mobile]
   acme/payments/api:
-    topics: [java, payments, azure-pipelines]
+    topics: [java, payments]
   acme/payments/docs:
-    topics: [docs, payments, no-ci]
+    topics: [docs, payments]
   acme/payments/fraud-scoring:
-    topics: [go, payments, azure-pipelines]
+    topics: [go, payments]
   acme/payments/gateway/adapters:
-    topics: [python, payments, azure-pipelines]
+    topics: [python, payments]
   acme/payments/gateway/api:
-    topics: [go, payments, github-actions]
+    topics: [go, payments]
   acme/payments/gateway/worker:
-    topics: [java, payments, jenkins]
+    topics: [java, payments]
   acme/payments/infra:
-    topics: [terraform, payments, gitlab-ci]
+    topics: [terraform, payments]
   acme/payments/ledger:
-    topics: [java, payments, github-actions]
+    topics: [java, payments]
   acme/payments/payouts:
-    topics: [java, payments, github-actions]
+    topics: [java, payments]
   acme/payments/reconciliation:
-    topics: [java, payments, github-actions]
+    topics: [java, payments]
   acme/payments/sdk:
-    topics: [python, payments, jenkins]
+    topics: [python, payments]
   acme/payments/settlement:
-    topics: [go, payments, azure-pipelines]
+    topics: [go, payments]
   acme/payments/worker:
-    topics: [java, payments, github-actions]
+    topics: [java, payments]
   acme/platform/api:
-    topics: [go, platform, github-actions]
+    topics: [go, platform]
   acme/platform/backoffice:
-    topics: [node, platform, github-actions]
+    topics: [node, platform]
   acme/platform/build-cache:
-    topics: [python, platform, github-actions]
+    topics: [python, platform]
   acme/platform/charts:
-    topics: [helm, platform, jenkins]
+    topics: [helm, platform]
   acme/platform/cli:
-    topics: [go, platform, no-ci]
+    topics: [go, platform]
   acme/platform/docs:
-    topics: [docs, platform, no-ci]
+    topics: [docs, platform]
   acme/platform/feature-flags:
-    topics: [go, platform, github-actions]
+    topics: [go, platform]
   acme/platform/infra:
-    topics: [terraform, platform, jenkins]
+    topics: [terraform, platform]
   acme/platform/observability/alerting:
-    topics: [go, platform, gitlab-ci]
+    topics: [go, platform]
   acme/platform/observability/collector:
-    topics: [rust, platform, no-ci]
+    topics: [rust, platform]
   acme/platform/observability/dashboards:
-    topics: [node, platform, github-actions]
+    topics: [node, platform]
   acme/platform/service-catalog:
-    topics: [go, platform, no-ci]
+    topics: [go, platform]
   acme/platform/worker:
-    topics: [rust, platform, azure-pipelines]
+    topics: [rust, platform]
   acme/security/api:
-    topics: [shell, security, no-ci]
+    topics: [shell, security]
   acme/security/backoffice:
-    topics: [node, security, github-actions]
+    topics: [node, security]
   acme/security/docs:
-    topics: [docs, security, gitlab-ci]
+    topics: [docs, security]
   acme/security/policy-bundles:
-    topics: [shell, security, github-actions]
+    topics: [shell, security]
   acme/security/secret-rotator:
-    topics: [shell, security, no-ci]
+    topics: [shell, security]
   acme/security/vuln-triage:
-    topics: [go, security, github-actions]
+    topics: [go, security]
   acme/security/worker:
-    topics: [python, security, jenkins]
+    topics: [python, security]
   acme/sre/cli:
-    topics: [shell, sre, github-actions]
+    topics: [shell, sre]
   acme/sre/infra:
-    topics: [terraform, sre, jenkins]
+    topics: [terraform, sre]
   acme/sre/legacy-deploy:
-    topics: [shell, sre, no-ci]
+    topics: [shell, sre]
   acme/sre/runbooks:
-    topics: [docs, sre, no-ci]
+    topics: [docs, sre]
   acme/support/api:
-    topics: [ruby, support, jenkins]
+    topics: [ruby, support]
   acme/support/docs:
-    topics: [docs, support, no-ci]
+    topics: [docs, support]
   acme/support/helpdesk-sync:
-    topics: [php, support, github-actions]
+    topics: [php, support]
   acme/support/knowledge-base:
-    topics: [docs, support, no-ci]
+    topics: [docs, support]
   acme/support/macros:
-    topics: [docs, support, no-ci]
+    topics: [docs, support]

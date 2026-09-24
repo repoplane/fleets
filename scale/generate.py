@@ -10,8 +10,8 @@ and --check is what stops a hand edit quietly becoming the thing everyone tests 
 The idea is that **structure is a literal table and variation is a hash**. Team and
 repository names cannot be generated -- a cross product of word lists is exactly what
 makes a fixture read as synthetic -- so the layout below is written out. What the hash
-decides is only the variation within it: which ecosystem a repository belongs to, which
-CI system it uses, which conventional files it happens to have.
+decides is only the variation within it: which ecosystem a repository belongs to and
+which conventional files it happens to have.
 
 Deterministic by construction. Every choice comes from a SHA-256 of the repository's
 full fleet path and the dimension being decided, so a regeneration on any machine
@@ -387,66 +387,19 @@ def archetype_of(path: str) -> str:
     return pool[roll(path, "archetype") % len(pool)]
 
 
-# --- CI ---------------------------------------------------------------------------
-# Every marker is inert by construction. The file is realistic in shape -- which is what
-# a rule matches on -- but nothing ever runs: a GitHub workflow on `workflow_dispatch`
-# and a GitLab pipeline on `when: never` mean an apply, and every reset push after it,
-# cannot spawn a run that fails for want of a runner, burns minutes, or leaves check-run
-# noise that verify knows nothing about. Jenkins and Azure Pipelines never auto-run on
-# any of the four forges.
-
-CI_FILES = {
-    "github-actions": (".github/workflows/ci.yml",
-                       "name: CI\n\n"
-                       "# Fixture only: dispatch-only, so an apply never starts a run.\n"
-                       "on: workflow_dispatch\n\n"
-                       "jobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n"
-                       "      - uses: actions/checkout@v4\n"
-                       "      - run: echo build\n"),
-    "gitlab-ci": (".gitlab-ci.yml",
-                  "# Fixture only: no pipeline is ever created.\n"
-                  "workflow:\n  rules:\n    - when: never\n\n"
-                  "build:\n  script:\n    - echo build\n"),
-    "azure-pipelines": ("azure-pipelines.yml",
-                        "# Fixture only: no CI trigger.\n"
-                        "trigger: none\npr: none\n\n"
-                        "pool:\n  vmImage: ubuntu-latest\n\n"
-                        "steps:\n  - script: echo build\n"),
-    "jenkins": ("Jenkinsfile",
-                "pipeline {\n"
-                "  agent any\n"
-                "  stages {\n"
-                "    stage('build') {\n"
-                "      steps { sh 'echo build' }\n"
-                "    }\n  }\n}\n"),
-}
-
-CI_WEIGHTS = {
-    "code": [("github-actions", 400), ("gitlab-ci", 200), ("azure-pipelines", 100),
-             ("jenkins", 100), ("none", 200)],
-    "terraform": [("github-actions", 100), ("gitlab-ci", 400), ("azure-pipelines", 200),
-                  ("jenkins", 300), ("none", 0)],
-    "helm": [("github-actions", 200), ("gitlab-ci", 300), ("azure-pipelines", 0),
-             ("jenkins", 300), ("none", 200)],
-    "docs": [("github-actions", 300), ("gitlab-ci", 100), ("azure-pipelines", 0),
-             ("jenkins", 0), ("none", 600)],
-    "shell": [("github-actions", 200), ("gitlab-ci", 0), ("azure-pipelines", 0),
-              ("jenkins", 300), ("none", 500)],
-}
-
-# A second marker beside the first: the half-finished migration, and the shape that
-# defeats any rule that looks for *the* CI system rather than all of them.
-SECOND_MARKER = 60
-
-
-def ci_of(path: str, archetype: str) -> list[str]:
-    group = archetype if archetype in CI_WEIGHTS else "code"
-    primary = weighted(path, "ci", CI_WEIGHTS[group])
-    out = [] if primary == "none" else [primary]
-    if out and primary != "jenkins" and roll(path, "ci-second") < SECOND_MARKER:
-        out.append("jenkins")
-    return out
-
+# CI configuration is deliberately absent.
+#
+# A realistic estate has .github/workflows, .gitlab-ci.yml and the rest, and an earlier
+# draft of this fleet generated them with triggers that could never fire. They came out
+# because nothing reads them yet: CI is not in repoplane's scope, so the only thing the
+# markers carried was risk. GitHub and GitLab both auto-discover their config, and an
+# inert trigger is only inert if it is written correctly -- get it wrong and every apply,
+# and every reset push after it, starts runs on private repositories that consume quota.
+#
+# (Azure DevOps is the exception and was never exposed: a pipeline there has to be created
+# and pointed at a file, so azure-pipelines.yml sitting in a repository does nothing.)
+#
+# Adding them back is a table and a helper when there is something to test with them.
 
 # --- conventional files -----------------------------------------------------------
 # Presence rates for a private company estate, which is a different place from the open
@@ -501,11 +454,6 @@ def build(path: str) -> tuple[dict[str, str], dict]:
     if has["codeowners"]:
         files["CODEOWNERS"] = f"* @{COMPANY}/{team}\n"
 
-    ci = ci_of(path, archetype)
-    for marker in ci:
-        rel, content = CI_FILES[marker]
-        files[rel] = content
-
     if archetype in BASE_IMAGE and roll(path, "dockerfile") < DOCKERFILE:
         image, tag = BASE_IMAGE[archetype]
         pinned = roll(path, "dockerfile-pin") < DOCKERFILE_PINNED
@@ -542,7 +490,6 @@ def build(path: str) -> tuple[dict[str, str], dict]:
         "archetype": archetype,
         "flat": flat(path),
         "ado": ado(path),
-        "ci": ci,
         "has": has,
     }
 
@@ -688,7 +635,6 @@ def census(corpus: dict) -> dict:
         },
         "census": {
             "archetype": tally(e["archetype"] for e in entries),
-            "ci": tally(m for e in entries for m in (e["ci"] or ["none"])),
             "dockerfile": tally(str(e["has"]["dockerfile"]) for e in entries),
             "files": dict(sorted(files.items(), key=lambda kv: (-kv[1], kv[0]))),
         },
@@ -722,7 +668,6 @@ def fleet_yaml(corpus: dict) -> str:
     ]
     for path, (_, entry) in corpus.items():
         topics = [entry["archetype"], entry["team"] or "unowned"]
-        topics.append(entry["ci"][0] if entry["ci"] else "no-ci")
         lines.append(f"  {path}:")
         lines.append(f"    topics: [{', '.join(topics)}]")
     return "\n".join(lines) + "\n"
@@ -783,7 +728,7 @@ def main() -> int:
     print(f"wrote {len(corpus)} repositories to {REPOS.relative_to(ROOT.parent)}/")
     print(f"  {c['structure']['namespaces']} namespaces, "
           f"depth {dict(c['structure']['depth'])}")
-    for label in ("archetype", "ci", "dockerfile"):
+    for label in ("archetype", "dockerfile"):
         print(f"  {label}: {c['census'][label]}")
     return 0
 

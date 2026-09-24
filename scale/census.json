@@ -53,13 +53,6 @@
       "shell": 8,
       "terraform": 5
     },
-    "ci": {
-      "azure-pipelines": 14,
-      "github-actions": 40,
-      "gitlab-ci": 9,
-      "jenkins": 19,
-      "none": 32
-    },
     "dockerfile": {
       "None": 66,
       "floating": 36,
@@ -70,8 +63,6 @@
       "LICENSE": 62,
       "CODEOWNERS": 54,
       "Dockerfile": 42,
-      ".github/workflows/ci.yml": 40,
-      "Jenkinsfile": 19,
       "go.mod": 17,
       "main.go": 17,
       "package.json": 17,
@@ -80,11 +71,9 @@
       "src/app.py": 17,
       "src/index.js": 17,
       "src/main/java/App.java": 17,
-      "azure-pipelines.yml": 14,
       "docs/index.md": 14,
       "docs/runbook.md": 14,
       "mkdocs.yml": 14,
-      ".gitlab-ci.yml": 9,
       "SECURITY.md": 9,
       "Makefile": 8,
       "bin/deploy.sh": 8,
@@ -120,9 +109,6 @@
         "project": "acme",
         "repo": "catalog-api"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -144,7 +130,6 @@
         "project": "acme",
         "repo": "catalog-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -166,9 +151,6 @@
         "project": "acme",
         "repo": "catalog-events"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -190,9 +172,6 @@
         "project": "acme",
         "repo": "catalog-importer"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -214,7 +193,6 @@
         "project": "acme",
         "repo": "catalog-media-pipeline"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -236,9 +214,6 @@
         "project": "acme",
         "repo": "catalog-pricing"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -260,7 +235,6 @@
         "project": "acme",
         "repo": "catalog-sdk"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -282,7 +256,6 @@
         "project": "acme",
         "repo": "catalog-search-indexer"
       },
-      "ci": [],
       "has": {
         "readme": false,
         "license": true,
@@ -304,10 +277,6 @@
         "project": "acme",
         "repo": "catalog-web"
       },
-      "ci": [
-        "github-actions",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -329,9 +298,6 @@
         "project": "acme",
         "repo": "catalog-worker"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -353,7 +319,6 @@
         "project": "acme",
         "repo": "checkout-api"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -375,9 +340,6 @@
         "project": "acme",
         "repo": "checkout-cart"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -399,7 +361,6 @@
         "project": "acme",
         "repo": "checkout-cli"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -421,7 +382,6 @@
         "project": "acme",
         "repo": "checkout-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -443,7 +403,6 @@
         "project": "acme",
         "repo": "checkout-events"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -465,9 +424,6 @@
         "project": "acme",
         "repo": "checkout-infra"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -489,9 +445,6 @@
         "project": "acme",
         "repo": "checkout-promo-engine"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -513,7 +466,6 @@
         "project": "acme",
         "repo": "checkout-tax-engine"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -535,7 +487,6 @@
         "project": "acme",
         "repo": "checkout-web"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -557,9 +508,6 @@
         "project": "acme",
         "repo": "checkout-worker"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -581,9 +529,6 @@
         "project": "acme",
         "repo": "data-api"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -605,9 +550,6 @@
         "project": "acme",
         "repo": "data-charts"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -629,9 +571,6 @@
         "project": "acme",
         "repo": "data-docs"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -653,9 +592,6 @@
         "project": "acme",
         "repo": "data-ingest-connectors"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -677,9 +613,6 @@
         "project": "acme",
         "repo": "data-ingest-scheduler"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -701,10 +634,6 @@
         "project": "acme",
         "repo": "data-lineage"
       },
-      "ci": [
-        "azure-pipelines",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -726,9 +655,6 @@
         "project": "acme",
         "repo": "data-metrics-store"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -750,7 +676,6 @@
         "project": "acme",
         "repo": "data-notebooks"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -772,9 +697,6 @@
         "project": "acme",
         "repo": "data-warehouse-models"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -796,9 +718,6 @@
         "project": "acme",
         "repo": "data-worker"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -820,7 +739,6 @@
         "project": "acme",
         "repo": "design-system"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -842,9 +760,6 @@
         "project": "acme",
         "repo": "growth-api"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -866,9 +781,6 @@
         "project": "acme",
         "repo": "growth-email-templates"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -890,9 +802,6 @@
         "project": "acme",
         "repo": "growth-experiments"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -914,10 +823,6 @@
         "project": "acme",
         "repo": "growth-landing-pages"
       },
-      "ci": [
-        "github-actions",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -939,9 +844,6 @@
         "project": "acme",
         "repo": "growth-referrals"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -963,9 +865,6 @@
         "project": "acme",
         "repo": "growth-sdk"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -987,7 +886,6 @@
         "project": "acme",
         "repo": "growth-web"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -1009,9 +907,6 @@
         "project": "acme",
         "repo": "growth-worker"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1033,9 +928,6 @@
         "project": "acme",
         "repo": "handbook"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1057,9 +949,6 @@
         "project": "acme",
         "repo": "identity-api"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1081,9 +970,6 @@
         "project": "acme",
         "repo": "identity-charts"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1105,9 +991,6 @@
         "project": "acme",
         "repo": "identity-directory-sync"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1129,7 +1012,6 @@
         "project": "acme",
         "repo": "identity-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -1151,9 +1033,6 @@
         "project": "acme",
         "repo": "identity-mfa"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1175,9 +1054,6 @@
         "project": "acme",
         "repo": "identity-scim-sync"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1199,7 +1075,6 @@
         "project": "acme",
         "repo": "identity-sdk"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1221,9 +1096,6 @@
         "project": "acme",
         "repo": "identity-session-store"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1245,9 +1117,6 @@
         "project": "acme",
         "repo": "identity-sso-broker"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1269,10 +1138,6 @@
         "project": "acme",
         "repo": "identity-web"
       },
-      "ci": [
-        "github-actions",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1294,9 +1159,6 @@
         "project": "acme",
         "repo": "identity-worker"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1318,9 +1180,6 @@
         "project": "acme",
         "repo": "logistics-api"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": false,
         "license": true,
@@ -1342,9 +1201,6 @@
         "project": "acme",
         "repo": "logistics-backoffice"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1366,9 +1222,6 @@
         "project": "acme",
         "repo": "logistics-carrier-adapters"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1390,9 +1243,6 @@
         "project": "acme",
         "repo": "logistics-events"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1414,9 +1264,6 @@
         "project": "acme",
         "repo": "logistics-infra"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1438,7 +1285,6 @@
         "project": "acme",
         "repo": "logistics-label-printer"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1460,7 +1306,6 @@
         "project": "acme",
         "repo": "logistics-tracking"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -1482,9 +1327,6 @@
         "project": "acme",
         "repo": "logistics-web"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1506,9 +1348,6 @@
         "project": "acme",
         "repo": "logistics-worker"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1530,9 +1369,6 @@
         "project": "acme",
         "repo": "mobile-android-app"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1554,7 +1390,6 @@
         "project": "acme",
         "repo": "mobile-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1576,7 +1411,6 @@
         "project": "acme",
         "repo": "mobile-ios-app"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1598,9 +1432,6 @@
         "project": "acme",
         "repo": "mobile-push-relay"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1622,9 +1453,6 @@
         "project": "acme",
         "repo": "mobile-sdk"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1646,7 +1474,6 @@
         "project": "acme",
         "repo": "mobile-web"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1668,10 +1495,6 @@
         "project": "acme",
         "repo": "payments-api"
       },
-      "ci": [
-        "azure-pipelines",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1693,7 +1516,6 @@
         "project": "acme",
         "repo": "payments-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -1715,9 +1537,6 @@
         "project": "acme",
         "repo": "payments-fraud-scoring"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1739,9 +1558,6 @@
         "project": "acme",
         "repo": "payments-gateway-adapters"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1763,9 +1579,6 @@
         "project": "acme",
         "repo": "payments-gateway-api"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1787,9 +1600,6 @@
         "project": "acme",
         "repo": "payments-gateway-worker"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1811,9 +1621,6 @@
         "project": "acme",
         "repo": "payments-infra"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1835,9 +1642,6 @@
         "project": "acme",
         "repo": "payments-ledger"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1859,9 +1663,6 @@
         "project": "acme",
         "repo": "payments-payouts"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1883,9 +1684,6 @@
         "project": "acme",
         "repo": "payments-reconciliation"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1907,9 +1705,6 @@
         "project": "acme",
         "repo": "payments-sdk"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -1931,9 +1726,6 @@
         "project": "acme",
         "repo": "payments-settlement"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1955,9 +1747,6 @@
         "project": "acme",
         "repo": "payments-worker"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -1979,9 +1768,6 @@
         "project": "acme",
         "repo": "platform-api"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2003,9 +1789,6 @@
         "project": "acme",
         "repo": "platform-backoffice"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2027,9 +1810,6 @@
         "project": "acme",
         "repo": "platform-build-cache"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2051,9 +1831,6 @@
         "project": "acme",
         "repo": "platform-charts"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2075,7 +1852,6 @@
         "project": "acme",
         "repo": "platform-cli"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -2097,7 +1873,6 @@
         "project": "acme",
         "repo": "platform-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -2119,9 +1894,6 @@
         "project": "acme",
         "repo": "platform-feature-flags"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2143,9 +1915,6 @@
         "project": "acme",
         "repo": "platform-infra"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2167,10 +1936,6 @@
         "project": "acme",
         "repo": "platform-observability-alerting"
       },
-      "ci": [
-        "gitlab-ci",
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2192,7 +1957,6 @@
         "project": "acme",
         "repo": "platform-observability-collector"
       },
-      "ci": [],
       "has": {
         "readme": false,
         "license": false,
@@ -2214,9 +1978,6 @@
         "project": "acme",
         "repo": "platform-observability-dashboards"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2238,7 +1999,6 @@
         "project": "acme",
         "repo": "platform-service-catalog"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -2260,9 +2020,6 @@
         "project": "acme",
         "repo": "platform-worker"
       },
-      "ci": [
-        "azure-pipelines"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2284,7 +2041,6 @@
         "project": "acme",
         "repo": "security-api"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -2306,9 +2062,6 @@
         "project": "acme",
         "repo": "security-backoffice"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2330,9 +2083,6 @@
         "project": "acme",
         "repo": "security-docs"
       },
-      "ci": [
-        "gitlab-ci"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2354,9 +2104,6 @@
         "project": "acme",
         "repo": "security-policy-bundles"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2378,7 +2125,6 @@
         "project": "acme",
         "repo": "security-secret-rotator"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -2400,9 +2146,6 @@
         "project": "acme",
         "repo": "security-vuln-triage"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2424,9 +2167,6 @@
         "project": "acme",
         "repo": "security-worker"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2448,9 +2188,6 @@
         "project": "acme",
         "repo": "sre-cli"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2472,9 +2209,6 @@
         "project": "acme",
         "repo": "sre-infra"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2496,7 +2230,6 @@
         "project": "acme",
         "repo": "sre-legacy-deploy"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -2518,7 +2251,6 @@
         "project": "acme",
         "repo": "sre-runbooks"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": false,
@@ -2540,9 +2272,6 @@
         "project": "acme",
         "repo": "support-api"
       },
-      "ci": [
-        "jenkins"
-      ],
       "has": {
         "readme": true,
         "license": true,
@@ -2564,7 +2293,6 @@
         "project": "acme",
         "repo": "support-docs"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -2586,9 +2314,6 @@
         "project": "acme",
         "repo": "support-helpdesk-sync"
       },
-      "ci": [
-        "github-actions"
-      ],
       "has": {
         "readme": true,
         "license": false,
@@ -2610,7 +2335,6 @@
         "project": "acme",
         "repo": "support-knowledge-base"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,
@@ -2632,7 +2356,6 @@
         "project": "acme",
         "repo": "support-macros"
       },
-      "ci": [],
       "has": {
         "readme": true,
         "license": true,

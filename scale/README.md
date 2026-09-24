@@ -95,27 +95,28 @@ The spread is uneven and stays that way. It is a draw, not a target — the whol
 fixture like this is to be something a rule pack was *not* tuned against, so `generate.py`
 reports the census rather than pinning it.
 
-## CI markers are present but inert
+## No CI configuration, deliberately
 
-A realistic spread of `.github/workflows/ci.yml`, `.gitlab-ci.yml`, `azure-pipelines.yml`,
-`Jenkinsfile` and nothing at all — with a few repositories carrying two, the half-finished
-migration, which is the shape that defeats a rule looking for *the* CI system.
+A realistic estate has `.github/workflows`, `.gitlab-ci.yml` and the rest, and an earlier draft of
+this fleet generated a spread of them with triggers that could never fire. They came out again,
+because **nothing reads them yet**: CI is not in repoplane's scope, so the only thing the markers
+carried was risk.
 
-**Every one of them is built so that nothing ever runs.** GitHub workflows are
-`on: workflow_dispatch`; GitLab pipelines are `workflow: rules: - when: never`; Jenkins and Azure
-Pipelines do not auto-run anywhere. Without that, an apply — and every `reset` push after it —
-would spawn pipelines that fail for want of a runner, burn Actions minutes and leave check-run
-noise that `verify` knows nothing about. The file is realistic in *shape*, which is what a rule
-matches on, and costs nothing.
+GitHub and GitLab both auto-discover their CI configuration, and an inert trigger is only inert
+if it is written correctly. Get it wrong and every apply — and every `reset` push after it —
+starts runs on private repositories that consume quota. That is a poor trade for a dimension
+nothing consumes.
 
-Pushing `.github/workflows/*` to GitHub needs the token's **Workflows: Read and write**
-permission.
+Azure DevOps was never the exposure, despite being the one that sounds expensive: a pipeline
+there has to be created and pointed at a file, so an `azure-pipelines.yml` sitting in a
+repository does nothing at all.
+
+Adding them back is a table and a helper, when there is something to test with them.
 
 ## census.json
 
 What each repository **has**, not whether it passes: team, subsystem, leaf, depth, archetype, its
-flat name, its Azure DevOps mapping, its CI markers, and which conventional files it carries.
-Plus the totals.
+flat name, its Azure DevOps mapping, and which conventional files it carries. Plus the totals.
 
 There is no `compliant` field on purpose. Baking a verdict into a fixture freezes one policy
 opinion, and the opinion belongs to whatever is being tested. `has.dockerfile` is three-state —

@@ -94,12 +94,12 @@ It exists for what `shapes/` structurally cannot reach:
   so a rule that assumes every repository is parseable visibly fails.
 
 [`scale/census.json`](scale/census.json) records what each repository *has* — archetype, team,
-depth, CI markers, which conventional files — but deliberately no verdict on whether that is
-good. The opinion belongs to whatever is being tested.
+depth, which conventional files — but deliberately no verdict on whether that is good. The
+opinion belongs to whatever is being tested.
 
-CI markers are present but **inert by construction**: GitHub workflows are `on:
-workflow_dispatch`, GitLab pipelines are `when: never`. An apply, and every `reset` push after
-it, would otherwise spawn pipelines that fail for want of a runner.
+It ships **no CI configuration**, which is a decision rather than an omission: nothing reads it
+yet, and GitHub and GitLab both auto-discover theirs, so a mistake in a trigger would start runs
+on every apply and every `reset` push after it.
 
 ## 🚀 Using a fleet
 
