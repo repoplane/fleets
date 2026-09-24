@@ -1,0 +1,1302 @@
+{
+  "version": 1,
+  "fleet_digest": "sha256:ba15ed8bde4d34614dd54ea67cdb9e10c645a859328fcb2a704c29b6a7d9bf43",
+  "repos": [
+    {
+      "name": "acme/catalog/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "56377ace85513dc72078d57045a95f152d3cf4da"
+    },
+    {
+      "name": "acme/catalog/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "docs"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "97ee13451431ffdf264bed504cb799806b876824"
+    },
+    {
+      "name": "acme/catalog/events",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "49da424a3b1290dca37d8dad15b1eea7d3c10e9f"
+    },
+    {
+      "name": "acme/catalog/importer",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "c22f4e356dd492a92014854d90064e90b5282086"
+    },
+    {
+      "name": "acme/catalog/media-pipeline",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "03196cee4043255e951decb1f2ee039a25495a93"
+    },
+    {
+      "name": "acme/catalog/pricing",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "8db618b4069742081329c35477ca7df2168a0151"
+    },
+    {
+      "name": "acme/catalog/sdk",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "go"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "0aa57de0e41ecac38c3340ad098a7f8e18c84280"
+    },
+    {
+      "name": "acme/catalog/search-indexer",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "466fd7aeb1a1253cf60756a612595fdc521d99a2"
+    },
+    {
+      "name": "acme/catalog/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "241418bd8a700936f6b2a38e0e1770bcff711adb"
+    },
+    {
+      "name": "acme/catalog/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "catalog",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "1632926f693552275b4c29254cd5603d7917a359"
+    },
+    {
+      "name": "acme/checkout/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "63700a1db43fa8f48ba1216c4a3dd586bdcaee97"
+    },
+    {
+      "name": "acme/checkout/cart",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "626896dcf3b0af451e2ea101f520b874b0cb3aaf"
+    },
+    {
+      "name": "acme/checkout/cli",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "rust"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "efecd0a443a3e4bfe15b42e7f46e15c43292a220"
+    },
+    {
+      "name": "acme/checkout/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "docs"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "cb1d60897db1012ddde923201cff7a065d2df1a7"
+    },
+    {
+      "name": "acme/checkout/events",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "go"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "021f24e7dfe54d99d8e31c9f2b3f4d0bee81a540"
+    },
+    {
+      "name": "acme/checkout/infra",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "terraform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "5709fe25b89d44d6be5946877cb78be3e05a7438"
+    },
+    {
+      "name": "acme/checkout/promo-engine",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "467a1d38eff78df542bbe8f25194cb6523e6cc9d"
+    },
+    {
+      "name": "acme/checkout/tax-engine",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "7ae23177fa01ced65303fa54657d9458624c0962"
+    },
+    {
+      "name": "acme/checkout/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "f67e4fd8a18e06577cf6e09ad044e866534ec8d2"
+    },
+    {
+      "name": "acme/checkout/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "checkout",
+        "go"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "7d55ef2d21eed1608de5d773a6a79e7972b99eb0"
+    },
+    {
+      "name": "acme/data/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "056a7dad52da2e52086c7af7f092ad4877c8eedc"
+    },
+    {
+      "name": "acme/data/charts",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "helm"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "0f6ffc72a24099ea2cca758936784dfceaec6c5b"
+    },
+    {
+      "name": "acme/data/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "docs"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "8b41173f489017d90689b733bb189706af6e6de5"
+    },
+    {
+      "name": "acme/data/ingest/connectors",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "ad7161f66053d70af14ee75419b9166e595a4bf6"
+    },
+    {
+      "name": "acme/data/ingest/scheduler",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "d7aa41f101f773799ec045b56701946419e01db5"
+    },
+    {
+      "name": "acme/data/lineage",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "d9593a3bcf8e63502565c51fbf7a00c035e37431"
+    },
+    {
+      "name": "acme/data/metrics-store",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "d1de07060aa3d34184c100078bc6deaf8f521120"
+    },
+    {
+      "name": "acme/data/notebooks",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "docs"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "40d6d265e78d47699ea8f7ac5ad6c186826d0a5f"
+    },
+    {
+      "name": "acme/data/warehouse-models",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "1317c4b03201b4cfd96cdf107b016c52cfc70eaf"
+    },
+    {
+      "name": "acme/data/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "data",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "a28bb65e9dd8103ec3e9efbe085c160ff98e0b39"
+    },
+    {
+      "name": "acme/design-system",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "unowned"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "c311433571ad167041e219a7f75aa2506b61b0b8"
+    },
+    {
+      "name": "acme/growth/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "ruby"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "13d8df424e636b77e0c0850b85697ed7ff8419c0"
+    },
+    {
+      "name": "acme/growth/email-templates",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "ab52d6be8441f103af9363d32bfffb63d7859a12"
+    },
+    {
+      "name": "acme/growth/experiments",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "af6b9d70ab2f6d66872397544d0c25e7e9d3c6fe"
+    },
+    {
+      "name": "acme/growth/landing-pages",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "53afba1d8a08f33a8f19347ea6739acc80b67cd5"
+    },
+    {
+      "name": "acme/growth/referrals",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "php"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "fa9ee14c6725994cb7e85175b15f3d3a22fb1bfd"
+    },
+    {
+      "name": "acme/growth/sdk",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "php"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "57d9e6ab8d4c43f8b457b976b5621fcaa30dd49d"
+    },
+    {
+      "name": "acme/growth/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "b87c1c956fcbf8d466cd60d0b60040aef7ed130a"
+    },
+    {
+      "name": "acme/growth/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "growth",
+        "php"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "92285327143ce45342353e6808e0c2ac8d88f7a5"
+    },
+    {
+      "name": "acme/handbook",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "node",
+        "unowned"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "0bfe09f8101c2d9913200ca293af57800676f483"
+    },
+    {
+      "name": "acme/identity/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "d2a45f8aef2f1e978e74f00db8d39ade63777978"
+    },
+    {
+      "name": "acme/identity/charts",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "helm",
+        "identity"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "0426c4709240a20267252d872cb4f8af533bdd79"
+    },
+    {
+      "name": "acme/identity/directory-sync",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "f730c4b6b4ce2b6a17cd62cfc53247584a74bd73"
+    },
+    {
+      "name": "acme/identity/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "identity"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e1676d37bfab4859709353f39ac86babfeca3b05"
+    },
+    {
+      "name": "acme/identity/mfa",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "d67117255aaf0540495a870279a6360ae424e9f3"
+    },
+    {
+      "name": "acme/identity/scim-sync",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "76a97bf83fd937335546b480caf8949ba3232ad6"
+    },
+    {
+      "name": "acme/identity/sdk",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "f36025da444c7a935429cf52ac98819ee853a107"
+    },
+    {
+      "name": "acme/identity/session-store",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "java"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e8566a2f6c55e00c664986cc45fee91883e37033"
+    },
+    {
+      "name": "acme/identity/sso-broker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "5321d222c1da9de47e6e8351def6cb2cdda158fa"
+    },
+    {
+      "name": "acme/identity/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "identity",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "88ef6c14b5f52be540f3e01f66f75a951bf0ff42"
+    },
+    {
+      "name": "acme/identity/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "identity"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "aad405faa9073afe939416bcd7f39485b1bdbacc"
+    },
+    {
+      "name": "acme/logistics/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "logistics",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "db766c10cd78c68f48836bc0a46a17db496fa215"
+    },
+    {
+      "name": "acme/logistics/backoffice",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "logistics",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "cc849a6251726d3cbfbc38d1ad76d13f429e154d"
+    },
+    {
+      "name": "acme/logistics/carrier-adapters",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "logistics"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "21ed503d7854bf4ab27eb50d62e4a3fcdaf588f9"
+    },
+    {
+      "name": "acme/logistics/events",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "dotnet",
+        "logistics"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e0fcb8ec1600fd088248fb56d7801f5f92bf5027"
+    },
+    {
+      "name": "acme/logistics/infra",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "logistics",
+        "terraform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e8f58c48a9ee0f4c376e39386fabb18d758a3a40"
+    },
+    {
+      "name": "acme/logistics/label-printer",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "logistics"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "2b42bf4ab0ab7c97797503f5e1b0c839bafa4af6"
+    },
+    {
+      "name": "acme/logistics/tracking",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "logistics"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "a0196add149414a96bfc5fa2b66476fe5940884a"
+    },
+    {
+      "name": "acme/logistics/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "logistics",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "0929f7c25b485817752c194681b37d98b7dee574"
+    },
+    {
+      "name": "acme/logistics/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "logistics"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "c1f68b8d16227d74abe8040d8b48888bd9c02afe"
+    },
+    {
+      "name": "acme/mobile/android-app",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "mobile"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "dd07d84305a211dab8b8a777e3b81295d17e9e9b"
+    },
+    {
+      "name": "acme/mobile/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "mobile"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "62fdad819f30679792681b362f69be9ea22824f5"
+    },
+    {
+      "name": "acme/mobile/ios-app",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "mobile",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "4c7642c83a7fcd55beea21979c7c485010d7976f"
+    },
+    {
+      "name": "acme/mobile/push-relay",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "mobile",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "55cd94960bf1a1d5cbfce116701887f71319a6e0"
+    },
+    {
+      "name": "acme/mobile/sdk",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "mobile",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "1ef820624d9794d9f8dc5c7d108e6e996fe212b5"
+    },
+    {
+      "name": "acme/mobile/web",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "mobile",
+        "node"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "3ecd5aa8e1eb2fd26bfdd6cb38982ee5568a2384"
+    },
+    {
+      "name": "acme/payments/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "f155d50c251ef731d0773c8131a3a6e448a79b79"
+    },
+    {
+      "name": "acme/payments/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "edaa738cfa0dfb36271b293fd0a1cdce08aa6192"
+    },
+    {
+      "name": "acme/payments/fraud-scoring",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "fd9893a10056d48e44e34962d8ca38218f793720"
+    },
+    {
+      "name": "acme/payments/gateway/adapters",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "payments",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "5959e3a09992b8c0ca91b9099eef8f0c9e1bcaa3"
+    },
+    {
+      "name": "acme/payments/gateway/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "60bd21362a04ff7b14c644f66665a0082dc60971"
+    },
+    {
+      "name": "acme/payments/gateway/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "4906ae2ebebd301170eb98b72ab0e6537a8c67a4"
+    },
+    {
+      "name": "acme/payments/infra",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "payments",
+        "terraform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e983287a1cc10943c433907791775f356f038a9f"
+    },
+    {
+      "name": "acme/payments/ledger",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "24660c338d077bafcb850f793a4767f5eabe8776"
+    },
+    {
+      "name": "acme/payments/payouts",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "f52eac10d86c0805ee0c9359601c8f1906c91a52"
+    },
+    {
+      "name": "acme/payments/reconciliation",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "875cabd35129ed446bd6637465d69604367c953c"
+    },
+    {
+      "name": "acme/payments/sdk",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "payments",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "2331a6e8e828f641e5c35b43535f1ebe67a4f0ac"
+    },
+    {
+      "name": "acme/payments/settlement",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "46ee48068c44b57921e4a6d140de21e4cac706eb"
+    },
+    {
+      "name": "acme/payments/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "java",
+        "payments"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "7161ef2ef18f31f4f77ea783222c3ce439814ed5"
+    },
+    {
+      "name": "acme/platform/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "aff11bcf2a66db9b6dd770a41ddcb6e14121f9e6"
+    },
+    {
+      "name": "acme/platform/backoffice",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "node",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "46296667eb904780f4afbeec7cab5448b0f76bf4"
+    },
+    {
+      "name": "acme/platform/build-cache",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "platform",
+        "python"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "ed21b33f20f416907ef1c78f3edfcdb3a66f398a"
+    },
+    {
+      "name": "acme/platform/charts",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "helm",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "112bdd2a4bf53468ea0853378901bb2a32909834"
+    },
+    {
+      "name": "acme/platform/cli",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "fe9a9df75931236a62cde8a7c21abe818240bc48"
+    },
+    {
+      "name": "acme/platform/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "19cbd9f3667975ad79aab47b8e26353a8b365dfe"
+    },
+    {
+      "name": "acme/platform/feature-flags",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e52b49abcab8b789a7cea2d136b69c5294af2870"
+    },
+    {
+      "name": "acme/platform/infra",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "platform",
+        "terraform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "c04bcbc232753e89975a6eba77c0a513794d1050"
+    },
+    {
+      "name": "acme/platform/observability/alerting",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "224d0b41a621ec8400c59b323dfba3a2c263a5d7"
+    },
+    {
+      "name": "acme/platform/observability/collector",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "platform",
+        "rust"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "86e643a3567ded69d4e2dc69f5018aa22075e762"
+    },
+    {
+      "name": "acme/platform/observability/dashboards",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "node",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "e760f9aefcc8fdecf85cb0fbb025b61153c3630e"
+    },
+    {
+      "name": "acme/platform/service-catalog",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "platform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "5f03ede7a11dad168f2c2fec51edc63552823bf3"
+    },
+    {
+      "name": "acme/platform/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "platform",
+        "rust"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "6ad49d70d49f6a1c71c6b5b8b4440ecba70b47a4"
+    },
+    {
+      "name": "acme/security/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "security",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "6da10c80c9cd87f75180bf89c14689341c9fd2bc"
+    },
+    {
+      "name": "acme/security/backoffice",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "node",
+        "security"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "b4ae2bc842e1bbb33f3b57497082a25e675558e5"
+    },
+    {
+      "name": "acme/security/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "security"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "81463f76684c59a506d6986ba2e14ed41c7e8874"
+    },
+    {
+      "name": "acme/security/policy-bundles",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "security",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "9460c7a9e7e0c8c8fdc44896a8c6699f9cbde7fc"
+    },
+    {
+      "name": "acme/security/secret-rotator",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "security",
+        "shell"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "cb5b1f0559d68c06734f14a31d36d7c3ebf2e4f1"
+    },
+    {
+      "name": "acme/security/vuln-triage",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "go",
+        "security"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "fa65a4d0dd653052595b35837475bd305b3b5b57"
+    },
+    {
+      "name": "acme/security/worker",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "python",
+        "security"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "766fb8835451c5c57971c09471c6210b915b778a"
+    },
+    {
+      "name": "acme/sre/cli",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "shell",
+        "sre"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "346c281313e95c84b8b4fc300da24dbc905a14f2"
+    },
+    {
+      "name": "acme/sre/infra",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "sre",
+        "terraform"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "42eb410090e571bcdec29ef081b22e4efca57c1b"
+    },
+    {
+      "name": "acme/sre/legacy-deploy",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "shell",
+        "sre"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "09dc769347de3f09c3e8c86a5f42d99a33640cda"
+    },
+    {
+      "name": "acme/sre/runbooks",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "sre"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "2cff0908d5a9420c8bc6d7ffa4c473465ff3c07d"
+    },
+    {
+      "name": "acme/support/api",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "ruby",
+        "support"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "31f272ff77958e74c087ec84b77f1a8cb7437379"
+    },
+    {
+      "name": "acme/support/docs",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "support"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "69111fb22f04fc27b7220f62bb0885cdbebe4bbd"
+    },
+    {
+      "name": "acme/support/helpdesk-sync",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "php",
+        "support"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "168280382d4ef7675756cdb9ffdb6d328e23b1ae"
+    },
+    {
+      "name": "acme/support/knowledge-base",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "support"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "dbb9f36f43eb4f1e30c67d04d32886ce38703242"
+    },
+    {
+      "name": "acme/support/macros",
+      "default_branch": "main",
+      "visibility": "private",
+      "topics": [
+        "docs",
+        "support"
+      ],
+      "archived": false,
+      "empty": false,
+      "baseline": "cedea7eed94862b617be71c89e79ed4060248c34"
+    }
+  ]
+}
