@@ -1,0 +1,7 @@
+{
+  "name": "repoplane/reporting-svc",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

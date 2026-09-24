@@ -13,7 +13,7 @@ identical for everyone who applies it.
 | Fleet | Repos | What it is for |
 |---|---:|---|
 | [`shapes/`](shapes) | 12 | One repository per shape a forge integration trips on: archived, no commits, a `master` default branch, tags, a public one among privates, namespaces. Correctness. |
-| `corpus/` | *planned* | A generated, deliberately heterogeneous set — ecosystem archetypes crossed with non-compliance patterns, shipped with ground-truth labels. Convergence measurement, and the only fleet large enough to cross a forge's pagination boundary. |
+| [`corpus/`](corpus) | 101 | Generated and deliberately heterogeneous: eight ecosystem archetypes crossed with non-compliance patterns, plus five repositories that fit no archetype. Ships `labels.json`, the ground truth a convergence number is measured against. The only fleet large enough to cross a forge's pagination boundary. |
 
 ## Using a fleet
 

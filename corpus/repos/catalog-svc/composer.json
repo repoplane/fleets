@@ -1,0 +1,7 @@
+{
+  "name": "repoplane/catalog-svc",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

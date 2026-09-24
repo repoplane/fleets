@@ -1,0 +1,7 @@
+{
+  "name": "repoplane/catalog-api",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}
