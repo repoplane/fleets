@@ -1,3 +1,3 @@
 # notify-job
 
-A java service in the repoplane corpus fleet.
+A python service in the repoplane corpus fleet.

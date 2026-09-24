@@ -1,3 +1,3 @@
 # identity-job
 
-A python service in the repoplane corpus fleet.
+A rust service in the repoplane corpus fleet.

@@ -20,201 +20,201 @@ repos:
   abandoned-spike:
     topics: [untyped, tail]
   audit-api:
-    topics: [python]
+    topics: [dotnet]
   audit-bridge:
-    topics: [python]
+    topics: [dotnet]
   audit-gateway:
-    topics: [python]
+    topics: [rust]
   audit-job:
     topics: [python]
   audit-svc:
-    topics: [python]
+    topics: [rust]
   audit-worker:
-    topics: [python]
-  billing-api:
-    topics: [dotnet]
+    topics: [java]
   billing-bridge:
-    topics: [dotnet]
+    topics: [java]
   billing-gateway:
-    topics: [dotnet]
+    topics: [node]
   billing-job:
     topics: [dotnet]
+  billing-relay:
+    topics: [java]
   billing-svc:
-    topics: [dotnet]
+    topics: [node]
   billing-worker:
-    topics: [dotnet]
+    topics: [rust]
   catalog-api:
     topics: [php]
   catalog-bridge:
     topics: [php]
   catalog-gateway:
-    topics: [php]
+    topics: [go]
   catalog-job:
-    topics: [php]
+    topics: [python]
   catalog-svc:
-    topics: [php]
+    topics: [dotnet]
   catalog-worker:
-    topics: [php]
+    topics: [java]
   checkout-api:
-    topics: [go]
+    topics: [python]
   checkout-bridge:
-    topics: [go]
+    topics: [python]
   checkout-gateway:
-    topics: [go]
+    topics: [java]
   checkout-job:
     topics: [go]
+  checkout-relay:
+    topics: [rust]
   checkout-svc:
-    topics: [go]
+    topics: [java]
   checkout-worker:
-    topics: [go]
+    topics: [python]
   docs-portal:
     topics: [untyped, tail]
   identity-api:
-    topics: [python]
+    topics: [ruby]
   identity-bridge:
-    topics: [python]
+    topics: [node]
   identity-gateway:
-    topics: [python]
+    topics: [ruby]
   identity-job:
-    topics: [python]
+    topics: [rust]
   identity-svc:
-    topics: [python]
+    topics: [dotnet]
   identity-worker:
-    topics: [python]
+    topics: [java]
   inventory-api:
     topics: [dotnet]
   inventory-bridge:
-    topics: [dotnet]
+    topics: [ruby]
   inventory-gateway:
-    topics: [dotnet]
+    topics: [go]
   inventory-job:
-    topics: [dotnet]
+    topics: [python]
   inventory-svc:
-    topics: [dotnet]
+    topics: [go]
   inventory-worker:
-    topics: [dotnet]
+    topics: [php]
   ledger-api:
-    topics: [java]
+    topics: [dotnet]
   ledger-bridge:
-    topics: [java]
+    topics: [php]
   ledger-gateway:
-    topics: [java]
+    topics: [ruby]
   ledger-job:
-    topics: [java]
+    topics: [php]
   ledger-svc:
-    topics: [java]
-  ledger-worker:
     topics: [java]
   legacy-monolith:
     topics: [untyped, tail]
   notify-api:
-    topics: [java]
+    topics: [php]
   notify-bridge:
-    topics: [java]
+    topics: [node]
   notify-gateway:
-    topics: [java]
+    topics: [dotnet]
   notify-job:
-    topics: [java]
+    topics: [python]
   notify-svc:
-    topics: [java]
+    topics: [node]
   notify-worker:
-    topics: [java]
+    topics: [node]
   orders-api:
-    topics: [node]
+    topics: [ruby]
   orders-bridge:
-    topics: [node]
+    topics: [go]
   orders-gateway:
-    topics: [node]
+    topics: [ruby]
   orders-job:
     topics: [node]
   orders-svc:
-    topics: [node]
+    topics: [python]
   orders-worker:
     topics: [node]
   payments-api:
-    topics: [go]
+    topics: [java]
   payments-bridge:
-    topics: [go]
+    topics: [dotnet]
   payments-gateway:
-    topics: [go]
+    topics: [rust]
   payments-job:
-    topics: [go]
+    topics: [php]
   payments-svc:
-    topics: [go]
+    topics: [php]
   payments-worker:
-    topics: [go]
+    topics: [dotnet]
   platform-monorepo:
     topics: [untyped, tail]
   pricing-api:
-    topics: [rust]
+    topics: [go]
   pricing-bridge:
-    topics: [rust]
+    topics: [node]
   pricing-gateway:
-    topics: [rust]
+    topics: [php]
   pricing-job:
-    topics: [rust]
+    topics: [ruby]
   pricing-svc:
     topics: [rust]
   pricing-worker:
     topics: [rust]
   reporting-api:
-    topics: [php]
+    topics: [python]
   reporting-bridge:
-    topics: [php]
+    topics: [java]
   reporting-gateway:
-    topics: [php]
+    topics: [python]
   reporting-job:
-    topics: [php]
+    topics: [node]
   reporting-svc:
-    topics: [php]
+    topics: [go]
   reporting-worker:
     topics: [php]
   scheduling-api:
-    topics: [rust]
+    topics: [node]
   scheduling-bridge:
-    topics: [rust]
+    topics: [python]
   scheduling-gateway:
-    topics: [rust]
+    topics: [python]
   scheduling-job:
     topics: [rust]
   scheduling-svc:
-    topics: [rust]
+    topics: [go]
   scheduling-worker:
-    topics: [rust]
+    topics: [dotnet]
   search-api:
-    topics: [node]
+    topics: [dotnet]
   search-bridge:
-    topics: [node]
+    topics: [go]
   search-gateway:
-    topics: [node]
+    topics: [ruby]
   search-job:
-    topics: [node]
+    topics: [ruby]
   search-svc:
-    topics: [node]
+    topics: [rust]
   search-worker:
-    topics: [node]
+    topics: [php]
   shipping-api:
-    topics: [ruby]
+    topics: [php]
   shipping-bridge:
-    topics: [ruby]
+    topics: [node]
   shipping-gateway:
-    topics: [ruby]
+    topics: [php]
   shipping-job:
-    topics: [ruby]
+    topics: [python]
   shipping-svc:
-    topics: [ruby]
+    topics: [php]
   shipping-worker:
-    topics: [ruby]
+    topics: [rust]
   tenancy-api:
-    topics: [ruby]
+    topics: [dotnet]
   tenancy-bridge:
     topics: [ruby]
   tenancy-gateway:
-    topics: [ruby]
+    topics: [rust]
   tenancy-job:
-    topics: [ruby]
+    topics: [dotnet]
   tenancy-svc:
-    topics: [ruby]
+    topics: [go]
   tenancy-worker:
     topics: [ruby]
   vendored-tool:

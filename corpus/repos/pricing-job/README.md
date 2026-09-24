@@ -1,3 +1,3 @@
 # pricing-job
 
-A rust service in the repoplane corpus fleet.
+A ruby service in the repoplane corpus fleet.

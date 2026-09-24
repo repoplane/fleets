@@ -1,4 +1,4 @@
-FROM rust:1.79-slim
+FROM php:8.3-cli
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

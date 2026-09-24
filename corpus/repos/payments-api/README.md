@@ -1,3 +1,3 @@
 # payments-api
 
-A go service in the repoplane corpus fleet.
+A java service in the repoplane corpus fleet.

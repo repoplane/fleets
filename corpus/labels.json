@@ -4,8 +4,8 @@
   "repo_count": 101,
   "totals": {
     "ci-workflow": {
-      "compliant": 82,
-      "violating": 16,
+      "compliant": 81,
+      "violating": 17,
       "not_applicable": 3
     },
     "codeowners": {
@@ -15,12 +15,12 @@
     },
     "dockerfile-pinned": {
       "compliant": 32,
-      "violating": 27,
-      "not_applicable": 42
+      "violating": 26,
+      "not_applicable": 43
     },
     "license": {
-      "compliant": 83,
-      "violating": 18,
+      "compliant": 82,
+      "violating": 19,
       "not_applicable": 0
     },
     "readme": {
@@ -63,7 +63,7 @@
       }
     },
     "audit-api": {
-      "archetype": "python",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -87,7 +87,7 @@
       }
     },
     "audit-bridge": {
-      "archetype": "python",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -112,7 +112,7 @@
       }
     },
     "audit-gateway": {
-      "archetype": "python",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -160,7 +160,7 @@
       }
     },
     "audit-svc": {
-      "archetype": "python",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -185,7 +185,7 @@
       }
     },
     "audit-worker": {
-      "archetype": "python",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -205,35 +205,11 @@
         },
         "dockerfile-pinned": {
           "compliant": true
-        }
-      }
-    },
-    "billing-api": {
-      "archetype": "dotnet",
-      "tail": false,
-      "rules": {
-        "readme": {
-          "compliant": true
-        },
-        "license": {
-          "compliant": true
-        },
-        "security-policy": {
-          "compliant": true
-        },
-        "ci-workflow": {
-          "compliant": true
-        },
-        "codeowners": {
-          "compliant": false
-        },
-        "dockerfile-pinned": {
-          "compliant": false
         }
       }
     },
     "billing-bridge": {
-      "archetype": "dotnet",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -258,7 +234,7 @@
       }
     },
     "billing-gateway": {
-      "archetype": "dotnet",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -305,8 +281,32 @@
         }
       }
     },
+    "billing-relay": {
+      "archetype": "java",
+      "tail": false,
+      "rules": {
+        "readme": {
+          "compliant": true
+        },
+        "license": {
+          "compliant": false
+        },
+        "security-policy": {
+          "compliant": true
+        },
+        "ci-workflow": {
+          "compliant": false
+        },
+        "codeowners": {
+          "compliant": false
+        },
+        "dockerfile-pinned": {
+          "compliant": false
+        }
+      }
+    },
     "billing-svc": {
-      "archetype": "dotnet",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -330,7 +330,7 @@
       }
     },
     "billing-worker": {
-      "archetype": "dotnet",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -403,7 +403,7 @@
       }
     },
     "catalog-gateway": {
-      "archetype": "php",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -428,7 +428,7 @@
       }
     },
     "catalog-job": {
-      "archetype": "php",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -452,7 +452,7 @@
       }
     },
     "catalog-svc": {
-      "archetype": "php",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -477,7 +477,7 @@
       }
     },
     "catalog-worker": {
-      "archetype": "php",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -501,7 +501,7 @@
       }
     },
     "checkout-api": {
-      "archetype": "go",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -526,7 +526,7 @@
       }
     },
     "checkout-bridge": {
-      "archetype": "go",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -550,7 +550,7 @@
       }
     },
     "checkout-gateway": {
-      "archetype": "go",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -598,8 +598,33 @@
         }
       }
     },
+    "checkout-relay": {
+      "archetype": "rust",
+      "tail": false,
+      "rules": {
+        "readme": {
+          "compliant": true
+        },
+        "license": {
+          "compliant": true
+        },
+        "security-policy": {
+          "compliant": true
+        },
+        "ci-workflow": {
+          "compliant": true
+        },
+        "codeowners": {
+          "compliant": false
+        },
+        "dockerfile-pinned": {
+          "compliant": null,
+          "reason": "no Dockerfile"
+        }
+      }
+    },
     "checkout-svc": {
-      "archetype": "go",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -624,7 +649,7 @@
       }
     },
     "checkout-worker": {
-      "archetype": "go",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -676,7 +701,7 @@
       }
     },
     "identity-api": {
-      "archetype": "python",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -701,7 +726,7 @@
       }
     },
     "identity-bridge": {
-      "archetype": "python",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -726,7 +751,7 @@
       }
     },
     "identity-gateway": {
-      "archetype": "python",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -750,7 +775,7 @@
       }
     },
     "identity-job": {
-      "archetype": "python",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -775,7 +800,7 @@
       }
     },
     "identity-svc": {
-      "archetype": "python",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -799,7 +824,7 @@
       }
     },
     "identity-worker": {
-      "archetype": "python",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -848,7 +873,7 @@
       }
     },
     "inventory-bridge": {
-      "archetype": "dotnet",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -873,7 +898,7 @@
       }
     },
     "inventory-gateway": {
-      "archetype": "dotnet",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -898,7 +923,7 @@
       }
     },
     "inventory-job": {
-      "archetype": "dotnet",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -922,7 +947,7 @@
       }
     },
     "inventory-svc": {
-      "archetype": "dotnet",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -947,7 +972,7 @@
       }
     },
     "inventory-worker": {
-      "archetype": "dotnet",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -971,7 +996,7 @@
       }
     },
     "ledger-api": {
-      "archetype": "java",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -996,7 +1021,7 @@
       }
     },
     "ledger-bridge": {
-      "archetype": "java",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1020,7 +1045,7 @@
       }
     },
     "ledger-gateway": {
-      "archetype": "java",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -1044,7 +1069,7 @@
       }
     },
     "ledger-job": {
-      "archetype": "java",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1091,30 +1116,6 @@
         }
       }
     },
-    "ledger-worker": {
-      "archetype": "java",
-      "tail": false,
-      "rules": {
-        "readme": {
-          "compliant": true
-        },
-        "license": {
-          "compliant": true
-        },
-        "security-policy": {
-          "compliant": true
-        },
-        "ci-workflow": {
-          "compliant": true
-        },
-        "codeowners": {
-          "compliant": false
-        },
-        "dockerfile-pinned": {
-          "compliant": false
-        }
-      }
-    },
     "legacy-monolith": {
       "archetype": null,
       "tail": true,
@@ -1143,7 +1144,7 @@
       }
     },
     "notify-api": {
-      "archetype": "java",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1167,7 +1168,7 @@
       }
     },
     "notify-bridge": {
-      "archetype": "java",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1191,7 +1192,7 @@
       }
     },
     "notify-gateway": {
-      "archetype": "java",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -1215,7 +1216,7 @@
       }
     },
     "notify-job": {
-      "archetype": "java",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1239,7 +1240,7 @@
       }
     },
     "notify-svc": {
-      "archetype": "java",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1264,7 +1265,7 @@
       }
     },
     "notify-worker": {
-      "archetype": "java",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1288,7 +1289,7 @@
       }
     },
     "orders-api": {
-      "archetype": "node",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -1312,7 +1313,7 @@
       }
     },
     "orders-bridge": {
-      "archetype": "node",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -1337,7 +1338,7 @@
       }
     },
     "orders-gateway": {
-      "archetype": "node",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -1386,7 +1387,7 @@
       }
     },
     "orders-svc": {
-      "archetype": "node",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1435,7 +1436,7 @@
       }
     },
     "payments-api": {
-      "archetype": "go",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -1459,7 +1460,7 @@
       }
     },
     "payments-bridge": {
-      "archetype": "go",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -1483,7 +1484,7 @@
       }
     },
     "payments-gateway": {
-      "archetype": "go",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -1508,7 +1509,7 @@
       }
     },
     "payments-job": {
-      "archetype": "go",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1533,7 +1534,7 @@
       }
     },
     "payments-svc": {
-      "archetype": "go",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1557,7 +1558,7 @@
       }
     },
     "payments-worker": {
-      "archetype": "go",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -1607,7 +1608,7 @@
       }
     },
     "pricing-api": {
-      "archetype": "rust",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -1632,7 +1633,7 @@
       }
     },
     "pricing-bridge": {
-      "archetype": "rust",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1656,7 +1657,7 @@
       }
     },
     "pricing-gateway": {
-      "archetype": "rust",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -1680,7 +1681,7 @@
       }
     },
     "pricing-job": {
-      "archetype": "rust",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -1754,7 +1755,7 @@
       }
     },
     "reporting-api": {
-      "archetype": "php",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1779,7 +1780,7 @@
       }
     },
     "reporting-bridge": {
-      "archetype": "php",
+      "archetype": "java",
       "tail": false,
       "rules": {
         "readme": {
@@ -1803,7 +1804,7 @@
       }
     },
     "reporting-gateway": {
-      "archetype": "php",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1827,7 +1828,7 @@
       }
     },
     "reporting-job": {
-      "archetype": "php",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1851,7 +1852,7 @@
       }
     },
     "reporting-svc": {
-      "archetype": "php",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -1900,7 +1901,7 @@
       }
     },
     "scheduling-api": {
-      "archetype": "rust",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -1925,7 +1926,7 @@
       }
     },
     "scheduling-bridge": {
-      "archetype": "rust",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1949,7 +1950,7 @@
       }
     },
     "scheduling-gateway": {
-      "archetype": "rust",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -1999,7 +2000,7 @@
       }
     },
     "scheduling-svc": {
-      "archetype": "rust",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -2023,7 +2024,7 @@
       }
     },
     "scheduling-worker": {
-      "archetype": "rust",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -2047,7 +2048,7 @@
       }
     },
     "search-api": {
-      "archetype": "node",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -2071,7 +2072,7 @@
       }
     },
     "search-bridge": {
-      "archetype": "node",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {
@@ -2095,7 +2096,7 @@
       }
     },
     "search-gateway": {
-      "archetype": "node",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -2120,7 +2121,7 @@
       }
     },
     "search-job": {
-      "archetype": "node",
+      "archetype": "ruby",
       "tail": false,
       "rules": {
         "readme": {
@@ -2145,7 +2146,7 @@
       }
     },
     "search-svc": {
-      "archetype": "node",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -2169,7 +2170,7 @@
       }
     },
     "search-worker": {
-      "archetype": "node",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -2193,7 +2194,7 @@
       }
     },
     "shipping-api": {
-      "archetype": "ruby",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -2218,7 +2219,7 @@
       }
     },
     "shipping-bridge": {
-      "archetype": "ruby",
+      "archetype": "node",
       "tail": false,
       "rules": {
         "readme": {
@@ -2242,7 +2243,7 @@
       }
     },
     "shipping-gateway": {
-      "archetype": "ruby",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -2266,7 +2267,7 @@
       }
     },
     "shipping-job": {
-      "archetype": "ruby",
+      "archetype": "python",
       "tail": false,
       "rules": {
         "readme": {
@@ -2290,7 +2291,7 @@
       }
     },
     "shipping-svc": {
-      "archetype": "ruby",
+      "archetype": "php",
       "tail": false,
       "rules": {
         "readme": {
@@ -2314,7 +2315,7 @@
       }
     },
     "shipping-worker": {
-      "archetype": "ruby",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -2339,7 +2340,7 @@
       }
     },
     "tenancy-api": {
-      "archetype": "ruby",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -2388,7 +2389,7 @@
       }
     },
     "tenancy-gateway": {
-      "archetype": "ruby",
+      "archetype": "rust",
       "tail": false,
       "rules": {
         "readme": {
@@ -2413,7 +2414,7 @@
       }
     },
     "tenancy-job": {
-      "archetype": "ruby",
+      "archetype": "dotnet",
       "tail": false,
       "rules": {
         "readme": {
@@ -2437,7 +2438,7 @@
       }
     },
     "tenancy-svc": {
-      "archetype": "ruby",
+      "archetype": "go",
       "tail": false,
       "rules": {
         "readme": {

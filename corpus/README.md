@@ -32,6 +32,15 @@ Copying 101 real repositories would have cost more and measured less:
 php — each a few hundred bytes of realistic *structure* (a manifest, an entry point,
 sometimes a Dockerfile), because structure is what rules match on.
 
+Archetypes are assigned by hashing the repository name, so the spread is uneven (10–14 per
+archetype) rather than a tidy twelve. That is deliberate twice over: real estates are not
+balanced, and a name can leave the pool without shifting every repository after it.
+
+Names are checked against every sibling fleet at generation time. Both fleets apply to the
+same sandbox organisation and forgelab identifies a repository by name, so a name used twice
+means one fleet silently overwrites the other on a live forge — which is exactly what
+happened the first time this corpus was applied, and why `claimed_elsewhere()` exists.
+
 Six rules are then applied at deliberately uneven rates. A corpus that misses every rule at
 the same frequency teaches a metric nothing; these roughly mirror a real estate, where
 READMEs are near-universal and CODEOWNERS is rare:
@@ -39,13 +48,13 @@ READMEs are near-universal and CODEOWNERS is rare:
 | Rule | Compliant | Violating | Not applicable |
 |---|---:|---:|---:|
 | `readme` | 95 | 6 | 0 |
-| `license` | 83 | 18 | 0 |
-| `ci-workflow` | 82 | 16 | 3 |
+| `license` | 82 | 19 | 0 |
+| `ci-workflow` | 81 | 17 | 3 |
 | `security-policy` | 57 | 43 | 1 |
 | `codeowners` | 42 | 59 | 0 |
-| `dockerfile-pinned` | 32 | 27 | 42 |
+| `dockerfile-pinned` | 32 | 26 | 43 |
 
-**`dockerfile-pinned` is the interesting column.** Forty-two repositories have no Dockerfile
+**`dockerfile-pinned` is the interesting column.** Forty-three repositories have no Dockerfile
 at all, so they are neither compliant nor violating. A tool that scores them as either one
 reports a number that is wrong in a way nobody notices. `labels.json` keeps the three states
 separate for exactly that reason.

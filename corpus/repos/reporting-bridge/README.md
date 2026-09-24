@@ -1,3 +1,3 @@
 # reporting-bridge
 
-A php service in the repoplane corpus fleet.
+A java service in the repoplane corpus fleet.

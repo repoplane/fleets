@@ -1,0 +1,7 @@
+{
+  "name": "repoplane/notify-api",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

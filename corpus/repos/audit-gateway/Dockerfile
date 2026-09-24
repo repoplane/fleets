@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM rust:1.79-slim
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

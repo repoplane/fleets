@@ -1,4 +1,4 @@
-FROM golang:1.23-alpine
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

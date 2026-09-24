@@ -1,4 +1,4 @@
-FROM ruby@sha256:a3309b674f6e861dbcf05cb503e40126351edc0a8e83bd51b1d2ef6806ee85cd
+FROM golang@sha256:c57f9a8a01fc6f767f8d4a50dbe0e9699840baf43898dda859c7c429ede3fe14
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

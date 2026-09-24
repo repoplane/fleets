@@ -1,4 +1,4 @@
-FROM eclipse-temurin@sha256:58bc89449719e526d52f57d68e05e77633a1f959f00d4f7abb5ce38a48567cab
+FROM node@sha256:443dba4b48c2742a4dda3d67913ae42d2ea48cbf01cfa0cfe6b7127f6e94fb94
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

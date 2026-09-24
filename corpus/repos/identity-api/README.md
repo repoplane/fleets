@@ -1,3 +1,3 @@
 # identity-api
 
-A python service in the repoplane corpus fleet.
+A ruby service in the repoplane corpus fleet.

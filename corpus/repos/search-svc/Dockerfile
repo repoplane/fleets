@@ -1,4 +1,4 @@
-FROM node@sha256:443dba4b48c2742a4dda3d67913ae42d2ea48cbf01cfa0cfe6b7127f6e94fb94
+FROM rust@sha256:c82bb2e102fcacc92f514871cc0afb3fbdca19c3ada2275bc2603b08cac77155
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

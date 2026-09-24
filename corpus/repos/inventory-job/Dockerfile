@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet@sha256:9dcb90cda325692189f9b8f70f382a8131ba01170027c4eeec2ecec1877cc32e
+FROM python@sha256:ad5bc2bfe24a39586c219593b59102519a8d97bfd0d0cd8aa20e889dc0f2ce87
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

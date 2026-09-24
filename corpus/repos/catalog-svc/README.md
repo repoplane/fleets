@@ -1,3 +1,3 @@
 # catalog-svc
 
-A php service in the repoplane corpus fleet.
+A dotnet service in the repoplane corpus fleet.

@@ -1,3 +1,3 @@
 # scheduling-worker
 
-A rust service in the repoplane corpus fleet.
+A dotnet service in the repoplane corpus fleet.

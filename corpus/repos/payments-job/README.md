@@ -1,3 +1,3 @@
 # payments-job
 
-A go service in the repoplane corpus fleet.
+A php service in the repoplane corpus fleet.

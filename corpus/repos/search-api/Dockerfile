@@ -1,4 +1,4 @@
-FROM node:20.11.0-alpine
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

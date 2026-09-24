@@ -1,4 +1,4 @@
-FROM php@sha256:2f11383224957d3b0b1613173b8cfa49a52807eaf56fd0fb3782cbc0c9dc255c
+FROM python@sha256:ad5bc2bfe24a39586c219593b59102519a8d97bfd0d0cd8aa20e889dc0f2ce87
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

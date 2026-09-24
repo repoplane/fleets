@@ -1,3 +1,3 @@
 # inventory-job
 
-A dotnet service in the repoplane corpus fleet.
+A python service in the repoplane corpus fleet.

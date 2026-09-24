@@ -28,9 +28,13 @@ SEED = "repoplane-corpus-v1"
 ROOT = Path(__file__).resolve().parent
 REPOS = ROOT / "repos"
 
-# 101 repositories: 96 generated (8 archetypes x 12) plus 5 in the tail. Ninety-six
-# clears a forge page (GitHub and GitLab list 100 at a time, Forgejo 50), so the corpus
-# is the only fleet that exercises the multi-page path against a live forge.
+# 101 repositories: 96 generated plus 5 in the tail. Ninety-six clears a forge page
+# (GitHub and GitLab list 100 at a time, Forgejo 50), so the corpus is the only fleet
+# that exercises the multi-page path against a live forge.
+#
+# Only the total is fixed here. Archetypes are assigned by hashing the repository name,
+# so the spread lands near this figure rather than exactly on it -- which is both more
+# realistic and what lets a name leave the pool without reshuffling everything after it.
 PER_ARCHETYPE = 12
 
 DOMAINS = [
@@ -38,7 +42,10 @@ DOMAINS = [
     "shipping", "pricing", "inventory", "payments", "notify", "search",
     "reporting", "audit", "tenancy", "scheduling",
 ]
-KINDS = ["api", "svc", "worker", "gateway", "job", "bridge"]
+# "relay" is spare capacity: names claimed by another fleet are dropped from the pool, and
+# the shortfall is backfilled from the end, so an exclusion costs two names rather than
+# reshuffling the whole corpus.
+KINDS = ["api", "svc", "worker", "gateway", "job", "bridge", "relay"]
 
 
 def roll(name: str, dimension: str) -> int:
@@ -206,13 +213,32 @@ CI_YML = (
     "      - run: echo build\n")
 
 
+def claimed_elsewhere() -> set[str]:
+    """Repository names another fleet in this repository already owns.
+
+    Both fleets are applied to the same sandbox organisation and forgelab identifies a
+    repository by name, so a name used twice means one fleet silently overwrites the
+    other's content on a live forge -- and the loser only finds out at `verify`. Reading
+    the sibling fleet is what keeps that from being a thing anyone has to remember.
+    """
+    claimed = set()
+    for fleet in sorted((ROOT.parent).iterdir()):
+        repos = fleet / "repos"
+        if fleet.name == ROOT.name or not repos.is_dir():
+            continue
+        claimed |= {p.name for p in repos.iterdir() if p.is_dir()}
+    return claimed
+
+
 def names() -> list[str]:
-    """96 distinct <domain>-<kind> names, in a fixed order."""
-    out = []
-    for kind in KINDS:
-        for domain in DOMAINS:
-            out.append(f"{domain}-{kind}")
-    return out[: len(ARCHETYPES) * PER_ARCHETYPE]
+    """Distinct <domain>-<kind> names that no sibling fleet claims, in a fixed order."""
+    claimed = claimed_elsewhere()
+    pool = [f"{d}-{k}" for k in KINDS for d in DOMAINS if f"{d}-{k}" not in claimed]
+    want = len(ARCHETYPES) * PER_ARCHETYPE
+    if len(pool) < want:
+        raise SystemExit(
+            f"name pool exhausted: {len(pool)} usable, need {want}. Add a domain or a kind.")
+    return pool[:want]
 
 
 def build_repo(name: str, archetype: str) -> tuple[dict, dict]:
@@ -344,8 +370,11 @@ def generate() -> dict:
     """Build the whole corpus in memory: {repo: (files, labels)}."""
     corpus: dict[str, tuple[dict, dict]] = {}
     archetypes = sorted(ARCHETYPES)
-    for i, name in enumerate(names()):
-        corpus[name] = build_repo(name, archetypes[i % len(archetypes)])
+    for name in names():
+        # Derived from the name, not its position: dropping a name from the pool then
+        # shifts nothing else, so an exclusion costs two repositories of churn instead
+        # of re-pushing most of the corpus to three forges.
+        corpus[name] = build_repo(name, archetypes[roll(name, "archetype") % len(archetypes)])
     corpus.update(tail_repos())
     return dict(sorted(corpus.items()))
 

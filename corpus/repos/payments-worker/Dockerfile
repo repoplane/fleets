@@ -1,4 +1,4 @@
-FROM golang@sha256:c57f9a8a01fc6f767f8d4a50dbe0e9699840baf43898dda859c7c429ede3fe14
+FROM mcr.microsoft.com/dotnet/aspnet@sha256:9dcb90cda325692189f9b8f70f382a8131ba01170027c4eeec2ecec1877cc32e
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

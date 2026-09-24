@@ -1,4 +1,4 @@
-FROM python@sha256:ad5bc2bfe24a39586c219593b59102519a8d97bfd0d0cd8aa20e889dc0f2ce87
+FROM eclipse-temurin@sha256:58bc89449719e526d52f57d68e05e77633a1f959f00d4f7abb5ce38a48567cab
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

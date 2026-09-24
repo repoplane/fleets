@@ -1,3 +1,3 @@
 # inventory-svc
 
-A dotnet service in the repoplane corpus fleet.
+A go service in the repoplane corpus fleet.

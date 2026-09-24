@@ -1,3 +1,3 @@
 # catalog-job
 
-A php service in the repoplane corpus fleet.
+A python service in the repoplane corpus fleet.

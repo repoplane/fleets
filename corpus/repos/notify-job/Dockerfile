@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jre
+FROM python:3.12-slim
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

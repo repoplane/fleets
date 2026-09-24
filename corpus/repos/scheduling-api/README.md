@@ -1,3 +1,3 @@
 # scheduling-api
 
-A rust service in the repoplane corpus fleet.
+A node service in the repoplane corpus fleet.

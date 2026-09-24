@@ -1,3 +1,3 @@
 # search-job
 
-A node service in the repoplane corpus fleet.
+A ruby service in the repoplane corpus fleet.

@@ -1,4 +1,4 @@
-FROM python@sha256:ad5bc2bfe24a39586c219593b59102519a8d97bfd0d0cd8aa20e889dc0f2ce87
+FROM ruby@sha256:a3309b674f6e861dbcf05cb503e40126351edc0a8e83bd51b1d2ef6806ee85cd
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

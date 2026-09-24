@@ -1,3 +1,3 @@
 # billing-worker
 
-A dotnet service in the repoplane corpus fleet.
+A rust service in the repoplane corpus fleet.

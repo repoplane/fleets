@@ -1,4 +1,4 @@
-FROM ruby:3.3-alpine
+FROM python:3.12-slim
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

@@ -1,4 +1,4 @@
-FROM node@sha256:443dba4b48c2742a4dda3d67913ae42d2ea48cbf01cfa0cfe6b7127f6e94fb94
+FROM php@sha256:2f11383224957d3b0b1613173b8cfa49a52807eaf56fd0fb3782cbc0c9dc255c
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

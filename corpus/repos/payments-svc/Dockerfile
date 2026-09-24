@@ -1,4 +1,4 @@
-FROM golang@sha256:c57f9a8a01fc6f767f8d4a50dbe0e9699840baf43898dda859c7c429ede3fe14
+FROM php@sha256:2f11383224957d3b0b1613173b8cfa49a52807eaf56fd0fb3782cbc0c9dc255c
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

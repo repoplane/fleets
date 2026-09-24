@@ -1,0 +1,7 @@
+{
+  "name": "repoplane/search-worker",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

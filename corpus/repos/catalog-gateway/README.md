@@ -1,3 +1,3 @@
 # catalog-gateway
 
-A php service in the repoplane corpus fleet.
+A go service in the repoplane corpus fleet.

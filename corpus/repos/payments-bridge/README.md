@@ -1,3 +1,3 @@
 # payments-bridge
 
-A go service in the repoplane corpus fleet.
+A dotnet service in the repoplane corpus fleet.

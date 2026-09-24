@@ -1,4 +1,4 @@
-FROM node:20.11.0-alpine
+FROM ruby:3.3-alpine
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

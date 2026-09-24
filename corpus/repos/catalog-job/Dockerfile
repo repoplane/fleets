@@ -1,4 +1,4 @@
-FROM php:8.3-cli
+FROM python:3.12-slim
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

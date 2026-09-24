@@ -1,4 +1,4 @@
-FROM eclipse-temurin@sha256:58bc89449719e526d52f57d68e05e77633a1f959f00d4f7abb5ce38a48567cab
+FROM mcr.microsoft.com/dotnet/aspnet@sha256:9dcb90cda325692189f9b8f70f382a8131ba01170027c4eeec2ecec1877cc32e
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

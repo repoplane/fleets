@@ -1,4 +1,4 @@
-FROM node:20.11.0-alpine
+FROM golang:1.23-alpine
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]

@@ -1,4 +1,4 @@
-FROM rust@sha256:c82bb2e102fcacc92f514871cc0afb3fbdca19c3ada2275bc2603b08cac77155
+FROM golang@sha256:c57f9a8a01fc6f767f8d4a50dbe0e9699840baf43898dda859c7c429ede3fe14
 WORKDIR /app
 COPY . .
 CMD ["echo", "ok"]
