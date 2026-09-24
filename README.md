@@ -38,72 +38,19 @@ applies it — and tests can assert against it.
 
 | Fleet | Repos | Question it answers |
 |---|---:|---|
-| 🧩 [`shapes/`](shapes) | 15 | *Does forgelab handle each forge correctly?* |
-| 🏢 [`scale/`](scale) | 108 | *Does it hold up at size — deep namespaces, more than one page, realistic variety?* |
+| 🧩 [**`shapes/`**](shapes) | 15 | *Does forgelab handle each forge correctly?* One repository per shape a forge integration trips on — archived, empty, a non-`main` default branch, the one public repository among privates, namespaces. Small enough that a failure points straight at what broke. |
+| 🏢 [**`scale/`**](scale) | 108 | *Does it hold up at size?* A plausible company under one `acme/` root: twelve uneven teams, namespaces three deep, and more repositories than a forge returns on one page. Generated, never hand-edited. |
+
+Each has its own README with the detail.
 
 They share every sandbox organisation, and forgelab identifies a repository by name, so nothing
-may be named twice. `scale` keeps everything under one `acme/` root, which makes that structural
-rather than a rule anyone has to remember — and on Azure DevOps, where only the first path
-segment becomes a project, it is also what keeps the two fleets from ever destroying each other:
-`scale` owns the project `acme`, `shapes` owns `fleet`, `platform` and `services`.
-
-## 🧩 `shapes/`
-
-Twelve repositories at the root, each one shape a forge integration trips on, and three more in
-namespaces. It is the same fleet as forgelab's
-[`examples/fleet`](https://github.com/repoplane/forgelab/tree/main/examples/fleet), kept in
-sync by hand.
-
-| Fixture | Shape |
-|---|---|
-| `compliant` | the control — nothing unusual |
-| `master-branch` | a default branch that is not `main` |
-| `archived` | archived: readable, and rejects every write |
-| `no-commits` | no commits at all — the null default ref |
-| `tagged` | carries tags `v1` and `v2` |
-| `scaffold` | a README and nothing else |
-| `public` | the one public repository among privates |
-| `dotfiles` | everything under dot-prefixed paths |
-| `billing-api` · `ledger-worker` · `node-gateway` · `parser-svc` | plain services, with topics |
-| `services/api` · `platform/core/api` | the same leaf name in two namespaces, one of them deep |
-| `platform/tooling` | a repository next to a namespace |
-
-Twelve is chosen for its divisors: listing the root with a page size of 12, 6, 5, 4, 3 or 1
-gives an exact single page, exact multiples, a short tail and a deep cursor chain.
-
-Namespaces land as subgroups on GitLab, as a project on Azure DevOps, and as a `-`-joined name
-on GitHub and Forgejo (`platform/core/api` is `platform-core-api` there), so on those two the
-listing holds all fifteen.
-
-## 🏢 `scale/`
-
-108 repositories laid out as a plausible company, under one `acme/` root: twelve uneven teams,
-three subsystems taking it to depth four, and leaf names that recur across teams on purpose —
-eleven of them are called `api`. Generated, never hand-edited, by
-[`scale/generate.py`](scale/generate.py); `--check` runs in CI so an edit cannot quietly become
-the thing everyone tests against.
-
-It exists for what `shapes/` structurally cannot reach:
-
-- **More than one page.** GitHub and GitLab list 100 at a time, Forgejo 50. 108 gives `100 + 8`
-  on the first two and `50 + 50 + 8` on the third — two *consecutive* full pages, the case that
-  `100 + 1` never produces.
-- **Namespaces at depth.** Sixteen subgroups on GitLab, created parents-first; one project on
-  Azure DevOps, where only the first segment counts; `acme-payments-gateway-api` on GitHub.
-- **Realistic variety.** Twelve archetypes, four of which carry no conventional manifest at all,
-  so a rule that assumes every repository is parseable visibly fails.
-
-[`scale/census.json`](scale/census.json) records what each repository *has* — archetype, team,
-depth, which conventional files — but deliberately no verdict on whether that is good. The
-opinion belongs to whatever is being tested.
-
-It ships **no CI configuration**, which is a decision rather than an omission: nothing reads it
-yet, and GitHub and GitLab both auto-discover theirs, so a mistake in a trigger would start runs
-on every apply and every `reset` push after it.
+may be named twice. `shapes` keeps the root and the namespaces `platform` and `services`; `scale`
+keeps everything under `acme/`. On Azure DevOps — where only the first path segment becomes a
+project — that is also what stops either fleet destroying the other.
 
 ## 🚀 Using a fleet
 
-`sandboxes.yaml` lives at the repository root, outside the fleet directory, so pass it
+`sandboxes.yaml` lives at the repository root, outside the fleet directories, so pass it
 explicitly:
 
 ```sh
@@ -119,18 +66,13 @@ forgelab reset  --sandbox gh --fleet shapes --config sandboxes.yaml
 fleets/
 ├── sandboxes.yaml      where each fleet can be applied — shared by all of them
 ├── .env.example        reads the tokens out of the macOS keychain
-├── shapes/
-│   ├── fleet.yaml
-│   ├── fleet.lock.json
-│   └── repos/<path>/   a directory holding a file is a repository;
-│                       one holding only directories is a namespace
-└── scale/
-    ├── generate.py     the source of everything else in this directory
-    ├── census.json     what each repository has, per repository
-    ├── fleet.yaml
-    ├── fleet.lock.json
-    └── repos/acme/<team>/[<subsystem>/]<repo>/
+├── shapes/             hand-written fixtures
+└── scale/              generated by scale/generate.py
 ```
+
+Inside a fleet, the directory tree under `repos/` **is** the fleet: a directory holding a file is
+a repository, one holding only directories is a namespace. `fleet.yaml` carries only what a
+directory cannot express, and `fleet.lock.json` is what `verify` compares against.
 
 ## 🔑 Tokens
 
@@ -167,14 +109,10 @@ The declared sandboxes target organisations that hold nothing else:
 **🔒 What protects a wrong target is not this file:** it is what the token can reach, plus
 forgelab's marker topic and its refusal to touch anything the fleet does not declare.
 
-Two consequences worth knowing:
-
 **⚠️ Azure DevOps has no repository topics and no per-repository visibility**, so it carries no
 marker — there, a repository with a declared name is treated as forgelab's. Keep that
 organisation empty of anything else.
 
-**🌍 `shapes/` contains one public repository**, deliberately: restoring visibility is the one
-drift whose failure has a real consequence, so it is exercised against live forges rather than
-only a fake server. On GitLab a public project cannot sit in a private group, so that single
-repository is why `repoplane-sandbox` is a public group.
-
+**🌍 `repoplane-sandbox` is a public group on GitLab** because `shapes` contains one public
+repository, and a public project cannot sit in a private group. Why that fixture is worth it is
+in [`shapes/README.md`](shapes/README.md).
