@@ -1,7 +1,8 @@
 # fleets
 
-Test fleets for [forgelab](https://github.com/repoplane/forgelab) and repoplane: forge
-edge-case shapes, and a labelled corpus for measuring convergence.
+Test fleets for repoplane, applied to real forges with
+[forgelab](https://github.com/repoplane/forgelab): forge edge-case shapes, and a labelled
+corpus for measuring convergence.
 
 A *fleet* is a directory that declares a known set of repositories. forgelab puts it into a
 sandbox organisation (`apply`), asserts it is still there (`verify`), and puts it back after a
