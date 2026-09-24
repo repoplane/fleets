@@ -1,7 +1,0 @@
-{
-  "name": "repoplane/shipping-api",
-  "type": "project",
-  "require": {
-    "php": ">=8.2"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "name": "repoplane/inventory-worker",
-  "type": "project",
-  "require": {
-    "php": ">=8.2"
-  }
-}

@@ -1,4 +1,0 @@
-[project]
-name = "inventory-job"
-version = "1.0.0"
-requires-python = ">=3.11"

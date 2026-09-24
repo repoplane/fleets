@@ -1,7 +1,0 @@
-{
-  "name": "repoplane/payments-job",
-  "type": "project",
-  "require": {
-    "php": ">=8.2"
-  }
-}
