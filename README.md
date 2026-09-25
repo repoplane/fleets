@@ -43,11 +43,6 @@ applies it — and tests can assert against it.
 
 Each has its own README with the detail.
 
-They share every sandbox organisation, and forgelab identifies a repository by name, so nothing
-may be named twice. `shapes` keeps the root and the namespaces `platform` and `services`; `scale`
-keeps everything under `acme/`. On Azure DevOps — where only the first path segment becomes a
-project — that is also what stops either fleet destroying the other.
-
 ## 🚀 Using a fleet
 
 `sandboxes.yaml` lives at the repository root, outside the fleet directories, so pass it
