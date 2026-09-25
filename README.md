@@ -38,8 +38,8 @@ applies it — and tests can assert against it.
 
 | Fleet | Repos | Question it answers |
 |---|---:|---|
-| 🧩 [**`shapes/`**](shapes) | 15 | *Does forgelab handle each forge correctly?* One repository per shape a forge integration trips on — archived, empty, a non-`main` default branch, the one public repository among privates, namespaces. Small enough that a failure points straight at what broke. |
-| 🏢 [**`scale/`**](scale) | 108 | *Does it hold up at size?* A plausible company under one `acme/` root: twelve uneven teams, namespaces three deep, and more repositories than a forge returns on one page. Generated, never hand-edited. |
+| 🧩&nbsp;[**`shapes/`**](shapes) | 15 | *Does forgelab handle each forge correctly?*<br>One small repository per edge case a forge integration trips on. |
+| 🏢&nbsp;[**`scale/`**](scale) | 108 | *Does it hold up at size?*<br>A generated company, namespaces three deep, past one listing page. |
 
 Each has its own README with the detail.
 
