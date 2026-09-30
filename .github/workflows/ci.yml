@@ -1,7 +1,7 @@
 name: CI
 
-# This runs. It is the repository's own workflow, not fixture content -- the inert markers
-# the scale fleet generates live under scale/repos/ and are never executed.
+# This runs. It is the repository's own workflow, not fixture content -- no fixture under
+# shapes/ or scale/ carries CI configuration (scale/README.md says why).
 on:
   push:
     branches: [main]
