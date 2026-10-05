@@ -104,11 +104,12 @@ The declared sandboxes target organisations that hold nothing else:
 | `ado` | Azure DevOps | <https://dev.azure.com/repoplane-sandbox> |
 
 **🔒 What protects a wrong target is not this file:** it is what the token can reach, plus
-forgelab's marker topic and its refusal to touch anything the fleet does not declare.
+forgelab's marker — `forgelab-managed` at the start of every description it writes — and its
+refusal to touch anything the fleet does not declare.
 
-**⚠️ Azure DevOps has no repository topics and no per-repository visibility**, so it carries no
-marker — there, a repository with a declared name is treated as forgelab's. Keep that
-organisation empty of anything else.
+**⚠️ Azure DevOps repositories have no description, topics or visibility of their own**, so
+they carry no marker — there, a repository with a declared name is treated as forgelab's. Keep
+that organisation empty of anything else.
 
 **🌍 `repoplane-sandbox` is a public group on GitLab** because `shapes` contains one public
 repository, and a public project cannot sit in a private group. Why that fixture is worth it is
