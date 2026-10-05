@@ -1,0 +1,4 @@
+FROM php@sha256:d80b10a6b342796cdfd0b84acc29995882038cccabf82346927769bc12cd7f57
+WORKDIR /app
+COPY . .
+CMD ["echo", "ok"]

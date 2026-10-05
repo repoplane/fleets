@@ -1,0 +1,4 @@
+FROM node@sha256:75e37f4451acc645a589242c9491c554acd9e5cd9c9050033789c22ccfda30fe
+WORKDIR /app
+COPY . .
+CMD ["echo", "ok"]

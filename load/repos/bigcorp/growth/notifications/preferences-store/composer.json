@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/preferences-store",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

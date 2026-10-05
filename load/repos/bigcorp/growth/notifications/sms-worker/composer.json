@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/sms-worker",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

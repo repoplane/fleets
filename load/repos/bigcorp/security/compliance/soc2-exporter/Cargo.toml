@@ -1,0 +1,4 @@
+[package]
+name = "soc2-exporter"
+version = "1.0.0"
+edition = "2021"

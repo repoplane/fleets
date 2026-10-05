@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/sms-client",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

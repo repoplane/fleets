@@ -1,0 +1,4 @@
+site_name: playbooks
+nav:
+  - Home: index.md
+  - Runbook: runbook.md

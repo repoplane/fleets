@@ -1,0 +1,4 @@
+[project]
+name = "recording-store"
+version = "1.0.0"
+requires-python = ">=3.11"

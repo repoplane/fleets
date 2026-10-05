@@ -1,0 +1,4 @@
+[package]
+name = "pipeline-templates-adapter"
+version = "1.0.0"
+edition = "2021"

@@ -1,0 +1,4 @@
+[project]
+name = "rate-shop-proxy"
+version = "1.0.0"
+requires-python = ">=3.11"

@@ -1,0 +1,4 @@
+[package]
+name = "devcontainer-gateway"
+version = "1.0.0"
+edition = "2021"

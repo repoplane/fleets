@@ -1,0 +1,4 @@
+FROM ruby@sha256:023c188595f127ae9b1f6a69290b3c7edb6e119c136e2e98353842e073a1e858
+WORKDIR /app
+COPY . .
+CMD ["echo", "ok"]

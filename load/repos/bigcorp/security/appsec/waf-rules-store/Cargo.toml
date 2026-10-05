@@ -1,0 +1,4 @@
+[package]
+name = "waf-rules-store"
+version = "1.0.0"
+edition = "2021"
