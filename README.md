@@ -38,9 +38,9 @@ applies it — and tests can assert against it.
 
 | Fleet | Repos | Question it answers |
 |---|---:|---|
-| 🧩&nbsp;[**`shapes/`**](shapes) | 15 | *Does forgelab handle each forge correctly?*<br>One small repository per edge case a forge integration trips on. |
-| 🏢&nbsp;[**`scale/`**](scale) | 108 | *Does it hold up at size?*<br>A generated company, namespaces three deep, past one listing page. |
-| 🏙️&nbsp;[**`load/`**](load) | 2,016 | *Does it hold up under load?*<br>scale at twenty times the size: a large company, twenty listing pages. |
+| 🧩&nbsp;[**`shapes`**](shapes) | 15 | *Does forgelab handle each forge correctly?*<br>One small repository per edge case a forge integration trips on. |
+| 🏢&nbsp;[**`scale`**](scale) | 108 | *Does it hold up at size?*<br>A generated company, namespaces three deep, past one listing page. |
+| 🏙️&nbsp;[**`load`**](load) | 2,016 | *Does it hold up under load?*<br>scale at twenty times the size: a large company, twenty listing pages. |
 
 Each has its own README with the detail.
 
