@@ -1,0 +1,4 @@
+[package]
+name = "rules-cli"
+version = "1.0.0"
+edition = "2021"

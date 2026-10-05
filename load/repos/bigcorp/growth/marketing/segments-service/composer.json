@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/segments-service",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

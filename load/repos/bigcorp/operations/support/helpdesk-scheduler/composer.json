@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/helpdesk-scheduler",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

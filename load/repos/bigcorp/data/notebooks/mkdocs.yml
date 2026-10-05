@@ -1,0 +1,4 @@
+site_name: notebooks
+nav:
+  - Home: index.md
+  - Runbook: runbook.md

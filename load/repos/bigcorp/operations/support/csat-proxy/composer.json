@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/csat-proxy",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}

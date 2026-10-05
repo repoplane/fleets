@@ -1,0 +1,7 @@
+{
+  "name": "bigcorp/knowledge-base-client",
+  "type": "project",
+  "require": {
+    "php": ">=8.2"
+  }
+}
